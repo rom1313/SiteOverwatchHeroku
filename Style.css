@@ -1,0 +1,648 @@
+@font-face {
+    font-family: "overwatchfont";
+    src: url('font/OPTIBankGothic-Medium.otf');
+}
+
+/*  HTML BODY FOOTER  */
+
+html {
+    background-color: black;
+    scroll-behavior: smooth;
+   
+}
+
+body {
+  
+    background-image: url('img/fond.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    box-sizing: border-box;
+    
+}
+
+section {
+
+    display: flex;
+    background-color: rgb(80, 80, 80);
+    background-image: url(img/comm.jpg);
+    background-position: center;
+    
+    font-family: "overwatchfont";
+    justify-content: center;
+   
+    
+    
+        border-radius: 12px;
+        border: solid 2px black;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+}
+
+
+/*  NAVIGATION  */
+
+ul {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    list-style: none;
+    margin: 2px;
+    padding: 3px;
+    font-family: "overwatchfont";
+    text-decoration: none;
+    font-size: 30px;
+    background-color: black;
+    border: solid 5px black;
+}
+
+li {
+    margin-left: 23px;
+    text-decoration: none;
+    list-style: none;
+    padding-left: 20px;
+}
+a:hover{
+
+
+text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(0, 0, 0);
+
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+
+#logo {
+    height: 55px;
+    position: absolute;
+    padding-left: 34px;
+}
+
+#video {
+    margin-top: 34PX;
+    margin-left: 80px;
+    width: 700px;
+    
+
+}
+video {
+    height: 400px;
+    z-index: -1;
+    border: solid 1px rgb(0, 174, 218);box-shadow: 0px 0px 10px rgb(0, 0, 0),
+    0px 0px 10px #000000;
+}
+
+#dva {
+    width: 40%;
+    height: 30%;
+    float: left;
+
+}
+
+/*  TEXTES  */
+
+h1 {
+    font-size: 45px;
+    text-shadow: 1px 1px 2px rgb(29, 29, 29), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+}
+h2{
+    color: #ffffff;
+    font-family: "overwatchfont";
+    font-size: medium;
+    text-shadow: 1px 1px 2px rgb(29, 29, 29), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+}
+
+
+
+#titre {
+    font-family: "overwatchfont";
+    font-size: x-large;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-shadow: 1px 1px 2px rgb(29, 29, 29), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+     padding: 45px;
+}
+
+#infoparc{
+color: #ffffff;
+
+
+}
+
+
+
+
+#tarifs {
+    background: url(img/TARIF.jpg) center;
+    width: 600px;
+    height:350px;
+    border: solid 2px black;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
+    border-radius: 40px;
+    display: block;
+    color: blanchedalmond;
+    margin: auto;
+    margin-top: 24px;
+    text-align: center;
+    
+
+
+}
+#infotarif{
+ position: absolute;
+    width: 10%;
+    margin-left: 45px;
+    margin-top: 20px;  z-index: 2;
+}
+#infotarif2{
+    position: absolute;
+    width: 40%;
+    margin-left: 100px;
+    margin-top: 320px;  z-index: 2;
+    color: #ffffff;
+    display: flex;
+        
+        }
+
+#tarifs>p {
+    
+    padding-top: 5px;
+    padding-bottom: 0px;
+    line-height: 34px;
+    cursor: help;
+  
+}
+
+#tariftitre {
+   font-size: 40px;
+
+    
+
+}
+/*  ESPACE COMMENTAIRE  */
+.alertecomm {
+
+    padding-top: 5px;
+    animation: fadein 2s;
+    color: #d30000;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+   margin: auto;
+   text-shadow: 1px 1px 2px rgb(90, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+   
+  
+}
+
+
+
+
+.comms {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-bottom: 14px;
+    font-size: 10px;
+    font-family: "overwatchfont", Courier, monospace;
+    line-height: 20px;
+    color: #ffffff;
+}
+
+#comminput {
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+    0px 0px 10px #000000;
+   
+
+}
+
+#pseudoinput {
+
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+    0px 0px 10px #000000;
+
+
+}
+
+#imgbastion {
+    width: 20%;
+    animation: fadein 2s;
+    text-shadow: 1px 1px 2px rgb(29, 29, 29), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+
+}
+
+#logo_connexion {
+    width: 20px;
+    animation: fadein 2s;
+    padding-top: 5px;
+ 
+
+
+
+}
+
+#commentairefirebase{
+text-align: center;
+display: list-item;
+background-color: #000000;
+width: 40%;
+margin: auto;
+margin-top: 20px;
+border-radius: 12px;
+background: url('img/comm.jpg');
+text-shadow: 1px 1px 2px rgb(29, 29, 29), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+background-attachment:fixed;
+background-position: center;
+
+
+
+border: solid 1px rgb(214, 214, 214);
+}
+
+
+
+
+#bouttonactivitees{
+color: #ffffff;
+background-color: #000000;
+margin: auto;
+margin-top: 16PX;
+margin-bottom: 10px;
+font-size: 15PX;
+font-family: "overwatchfont";
+box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
+
+}
+#divbouttonactivitees{
+display: flex;
+justify-self: center;
+
+}
+#poster{
+    color: #ffffff;
+    background-color: #000000;
+    margin: auto;
+    margin-top: 16PX;
+    margin-bottom: 10px;
+    font-size: 15PX;
+    font-family: "overwatchfont";
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+            0px 0px 10px #000000;
+
+}
+
+
+#logotitre {
+    width: 100%;
+}
+#news{
+    text-align: center;
+}
+
+header{
+display: grid;
+justify-items:center;
+background-color: black;
+padding-bottom: 12px;
+}
+
+button>img {
+    width: 50px;
+
+
+
+
+}
+
+nav {
+    background-color: black;
+
+
+}
+
+section {
+    border: solid 1px rgb(0, 174, 218);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+    0px 0px 10px #000000;
+    border-radius: 12px;
+    text-shadow: 1px 1px 2px rgb(29, 29, 29), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+    
+
+}
+
+core {
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    border: solid 1px black;
+    width: 80%;
+    padding: auto;
+
+
+
+
+}
+
+
+#facebook,
+#twitter,
+#youtube {
+    text-decoration: none;
+align-items: center;
+padding: 23px;
+
+}
+
+#twitter{
+
+width: 50px;
+
+}
+
+#facebook {
+
+width: 50px;
+}
+
+#youtube{
+
+
+width: 50px;
+}
+
+#blizzard {
+    float: left;
+    padding-bottom: 15px;
+
+
+}
+#social{
+
+display: flex;
+justify-content: center;
+
+
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+.card {
+    width: 45px;
+
+
+}
+
+h1 {
+
+
+    color: #ffffff;
+}
+
+#overwatch{
+margin:0;
+
+
+}
+footer{
+    font-family: "overwatchfont";
+    padding: 15px;
+
+
+}
+
+
+
+
+
+.carousel {
+    position: relative;
+    border: solid 1px rgb(0, 174, 218);
+    border-radius: 5px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 90%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(19px);
+    }
+}
+
+
+
+
+
+/* ---------------------------------------Responsive mediaquery tablette ---------------------------------------*/
+
+@media(min-width: 760px) and (max-width: 1388px) {
+    video {
+        height: 345px;
+        
+        justify-self: center;
+       
+    }
+
+    ul {
+      font-size: 15px;
+    }
+    #titre {
+       font-size: 15px;
+    }
+    #infotarif{
+        display: none;
+       }
+       #infotarif2{
+        display: none;
+       }
+
+       #dva {
+      display: none;
+    
+    }
+    #commentairefirebase{
+    width: 70%;
+    }
+    h1{
+        font-size: 35px;
+    }
+    
+}
+
+/* ---------------------------------------Responsive mediaquery phone ---------------------------------------*/
+@media (max-width: 760px) {
+
+    BODY{
+width: 640px;
+
+margin: auto;
+
+}
+section{
+margin-top: 5px;
+
+
+}
+ul {
+    font-size: 13px;
+  }
+video {
+    height: 272px;
+   
+}
+
+
+#tarifs {
+    width: 80%;
+    
+
+
+}
+#dva {
+   display: none;
+
+}
+#titre {
+    font-size: 15px;
+ }
+ #infotarif{
+    display: none;
+   }
+   #infotarif2{
+    display: none;
+   }
+   #commentairefirebase{
+    width: 80%;
+    }
+    h1{
+        font-size: 35px;
+    }
+}

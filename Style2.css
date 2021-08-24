@@ -1,0 +1,292 @@
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+.alertecomm>{
+
+
+
+
+
+
+}
+#error{
+padding-top: 0%;
+PADDING-bottom: 43px;
+
+}
+#activitees {
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
+    text-align: center;
+    background: url('img/map1.jpg');
+    border-radius: 15px;
+    width: 60%;
+    margin: auto;
+    background-position: center;
+    background-attachment: initial;
+    font-family: "overwatchfont";
+    height: 600px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
+}
+
+
+#descriptionactivitees {
+
+    color: rgb(255, 255, 255);
+    display: block;
+    padding-top: 5px;
+    font-size: 20px;
+
+
+
+
+}
+
+body {
+    text-align: center;
+    font-family: "overwatchfont";
+}
+
+.jaime {
+    color: yellow
+}
+
+#commmaria {
+
+    float: left;
+    position: absolute;
+    margin-top: 550px;
+    margin-left: 60px;
+
+    text-align: center;
+    border-radius: 23px;
+    text-shadow: 1px 1px 2px rgb(0, 180, 171), 0 0 1em rgb(0, 152, 199), 0 0 0.2em rgb(0, 0, 0);
+
+    animation: fadein 2s;
+}
+
+.commmaria {
+    font-size: 12px;
+    color: antiquewhite;
+
+}
+
+#reservationajout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    background: url("img/actvitieanna.jpg");
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    width: 65%;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
+    border: solid 2px rgb(0, 0, 0);
+    border-radius: 12px;
+
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(235, 235, 235), 0 0 0.2em rgb(0, 0, 0);
+}
+
+#img1,
+#img2,
+#img3 {
+    border-radius: 90%;
+    width: 250PX;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
+}
+
+#lasergame,
+#bodypainting,
+#spectales {
+
+    margin: 30px;
+
+
+
+
+
+}
+
+#lasergame>div,
+#bodypainting>div,
+#spectales>div {
+    padding: 4px;
+
+
+    margin: auto;
+    margin-top: 20px;
+    width: max-content;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+
+
+
+#apercu {
+    background-color: aliceblue;
+    width: 40%;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
+    font-family: "overwatchfont";
+    border-radius: 12px;
+    border: solid 1px rgb(25, 220, 255);
+    margin-top: 23px;
+    background: url('img/RESERVATION.jpg');
+    background-position: initial;
+    color: white;
+    ;
+}
+
+div>button {
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
+    font-size: large;
+    font-family: "overwatchfont";
+    border-radius: 2px;
+}
+
+div>button:hover {
+
+
+    box-shadow: 0px 0px 13px rgb(25, 220, 255),
+        0px 0px 1px #000000;
+}
+
+span {
+    color: rgb(240, 136, 0);
+    background-color: #000000;
+
+
+}
+
+#bouttonbody {
+    color: #ffffff;
+    background-color: #000000;
+    margin: auto;
+    margin-top: 16PX;
+    margin-bottom: 10px;
+    font-size: 15PX;
+    font-family: "overwatchfont";
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
+
+}
+
+#valider,
+#telechargement,
+#nouvellereservation {
+    color: #ffffff;
+    background-color: #000000;
+    margin: auto;
+    margin-top: 16PX;
+    margin-bottom: 10px;
+    font-size: 10PX;
+    font-family: "overwatchfont";
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
+
+}
+
+
+
+/* ---------------------------------------Responsive mediaquery tablette ---------------------------------------*/
+
+@media(min-width: 760px) and (max-width: 1388px) {
+
+
+
+    #activitees {
+        width: 700px;
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+        width: 180PX;
+
+    }
+
+    #reservationajout {
+        width: 80%;
+
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+        width: 150PX;
+
+    }
+
+}
+
+/* ---------------------------------------Responsive mediaquery phone ---------------------------------------*/
+@media (max-width: 760px) {
+    body {
+        text-align: center;
+        font-family: "overwatchfont";
+    }
+     #activitees {
+        width: 500px;
+
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #commmaria {
+        float: left;
+        margin-top: 250px;
+        margin-left: 30px;
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+
+        width: 90PX;
+
+    }
+    #lasergame,
+#bodypainting,
+#spectales {
+
+    margin: 2px;
+
+
+
+
+
+}
+div>button {
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
+    font-size: small;
+    font-family: "overwatchfont";
+    border-radius: 2px;
+}
+
+
+}
