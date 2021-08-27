@@ -10,6 +10,7 @@ const port = process.env.PORT|| 13000
 //TODO ------- AJOUT DE SOKET.IO-----
 //TODO ----------------------------------------------
 const server = require('http').Server(app)
+const helmet = require("helmet");
 
 //TODO ----------------------------------------------
 //TODO ------- LANCEMENT ECOUTE-----
@@ -22,7 +23,7 @@ server.listen(process.env.PORT || 13000, () => {
 //TODO -----------------------------------------------------------
 //TODO ------- Déclaration des fichiers static utilisé-----
 //TODO -----------------------------------------------------------
-
+app.use(helmet());
 var publicDir = require('path').join(__dirname, '');
 app.use(express.static(publicDir));
 app.use(express.static('static'));
