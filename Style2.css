@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "overwatchfont";
+    src: url('font/OPTIBankGothic-Medium.otf');
+}
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -7,13 +12,85 @@
         opacity: 1;
     }
 }
-.alertecomm>{
+
+html {
+    background-color: black;
+    scroll-behavior: smooth;
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+}
+input,textarea{
+    outline: none;
+    
+    }
+
+/*  NAVIGATION  */
+header {
+    display: grid;
+    justify-items: center;
+    background-color: black;
+    padding-bottom: 12px;
+}
+ul {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    list-style: none;
+    margin-top: 8px;
+    padding: 3px;
+    font-family: "overwatchfont";
+    text-decoration: none;
+    font-size: 30px;
+    background-color: black;
+    border: solid 5px black;
+    align-self: center;
+}
+
+li {
+    margin-left: 23px;
+    text-decoration: none;
+    list-style: none;
+    padding-left: 20px;
+}
+
+a:hover {
 
 
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(0, 0, 0);
+
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
 
 
+#logo {
+    height: 55px;
+    position: absolute;
+margin-top: 10px;
+    transform: translate(34px, 0);
+}
+
+.alertecomm {
+
+    padding-top: 5px;
+    animation: fadein 2s;
+    color: #d30000;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    margin: auto;
+    text-shadow: 1px 1px 2px rgb(90, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
 
 
+}
+h1 {
+    font-size: 35px;color: #ffffff;font-family: "overwatchfont";
+    text-shadow: 1px 1px 2px rgb(29 29 29), 0 0 1em rgb(0 0 0), 0 0 0.2em rgb(0 0 0);
 }
 #error{
 padding-top: 0%;
@@ -50,9 +127,20 @@ PADDING-bottom: 43px;
 }
 
 body {
-    text-align: center;
-    font-family: "overwatchfont";
-}
+
+
+    margin: 0%;
+        background-image: url('img/fond.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    
+    
+    
+    
+    }
 
 .jaime {
     color: yellow
@@ -93,7 +181,7 @@ body {
         0px 0px 10px #000000;
     border: solid 2px rgb(0, 0, 0);
     border-radius: 12px;
-
+font-family: 'overwatchfont';
     text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(235, 235, 235), 0 0 0.2em rgb(0, 0, 0);
 }
 
@@ -137,7 +225,7 @@ body {
 
 #apercu {
     background-color: aliceblue;
-    width: 40%;
+    width: 50%;
     margin: auto;
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
         0px 0px 10px #000000;
@@ -203,14 +291,65 @@ span {
         0px 0px 10px #000000;
 
 }
+#facebook,
+#twitter,
+#youtube {
+    text-decoration: none;
+    align-items: center;
+    padding: 23px;
+
+}
+
+#twitter {
+
+    width: 50px;
+
+}
+
+#facebook {
+
+    width: 50px;
+}
+
+#youtube {
+
+
+    width: 50px;
+}
 
 
 
-/* ---------------------------------------Responsive mediaquery tablette ---------------------------------------*/
+#social {
+
+    display: flex;
+    justify-content: center;
+
+
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: black;
+    font-family: 'overwatchfont';
+    padding: 15px;
+}
+
+/* todo ---------------------------------------Responsive mediaquery tablette ---------------------------------------*/
 
 @media(min-width: 760px) and (max-width: 1388px) {
 
-
+    body{
+        
+        margin: 0%;
+        
+                
+            }
+            ul {
+                font-size: 15px;
+            }
 
     #activitees {
         width: 700px;
@@ -234,17 +373,48 @@ span {
         width: 150PX;
 
     }
-
-}
-
-/* ---------------------------------------Responsive mediaquery phone ---------------------------------------*/
-@media (max-width: 760px) {
-    body {
-        text-align: center;
+    div>button {
+        color: rgb(255, 255, 255);
+        background-color: #000000;
+    
+        box-shadow: 0px 0px 10px rgb(0, 0, 0),
+            0px 0px 10px #000000;
+        font-size: 17px;
         font-family: "overwatchfont";
+        border-radius: 2px;
+        
+    }
+
+button{
+    cursor: pointer;
+}
+}
+/* todo--------------------------------------Responsive mediaquery phone ---------------------------------------*/
+@media (max-width: 759px) {
+    header {
+        display: flex;
+        justify-items: center;
+        background-color: black;
+        padding-bottom: 12px;
+        width: 100%;
+    }
+    header a{
+font-size: 8px;
+
+    }
+    header li{
+        padding: 0%;
+    }
+    
+    body{
+        width: 100%;
+        margin: 0%;
+    }
+    ul {
+        font-size: 13px;
     }
      #activitees {
-        width: 500px;
+        width: 350px;
 
         height: 300px;
     }
@@ -270,7 +440,8 @@ span {
 #bodypainting,
 #spectales {
 
-    margin: 2px;
+    margin-left: 11px;
+    margin-right: 11px;
 
 
 
@@ -283,10 +454,34 @@ div>button {
 
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
         0px 0px 10px #000000;
-    font-size: small;
+    font-size: 8px;
     font-family: "overwatchfont";
     border-radius: 2px;
+    
 }
+#reservationajout {
+    width: 90%;
 
+}
+#reservationajout p{
+
+    font-size: 10px;
+}
+#logo{
+    transform: translate(12px, 0px);
+height: 40px;
+
+}
+#aperçu{
+
+width: 200%;
+
+}
+#jaimeboutton{
+    font-size: 35px;
+}
+#bouttonspectacle,#bouttonlaser,#ajoutbody{
+    font-size: 8px;
+}
 
 }

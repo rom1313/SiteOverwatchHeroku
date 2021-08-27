@@ -14,6 +14,7 @@ firebase.initializeApp(firebaseConfig);
 //TODO ------------------------------------------------------------------------------- App and variables --------------------------
 
 affichercomm()
+
 let input1 = document.querySelector("#pseudoinput")
 let input2 = document.querySelector("#comminput")
 
@@ -21,31 +22,31 @@ function affichercomm() {
 
   ref = firebase.database().ref('Commentaires/')
   ref.on("value", function (snapshot) {
-      
-      snapshot.forEach(function (childSnapshot) {
-          let p = document.createElement("p")
-          let commss = document.querySelector("#espacecomm");
-          let data = childSnapshot.val();
-          let pseudo;
-          let commentaire;
-          pseudo = data.pseudo
-          commentaire = data.commentaire
-          
-          p.className = "comms"
-          p.innerHTML = pseudo + " " + ":  " + "  " + commentaire;
-          document.querySelector("#espacecomm").appendChild(p)
-      })
+
+    snapshot.forEach(function (childSnapshot) {
+      let p = document.createElement("p")
+      let commss = document.querySelector("#espacecomm");
+      let data = childSnapshot.val();
+      let pseudo;
+      let commentaire;
+      pseudo = data.pseudo
+      commentaire = data.commentaire
+
+      p.className = "comms"
+      p.innerHTML = pseudo + " " + ":  " + "  " + commentaire;
+      document.querySelector("#espacecomm").appendChild(p)
+    })
 
 
-      return
+    return
   })
 }
 //TODO -------------------------------------------------------------------------------  Constructeur commentaire firebase --------------------------
 
 function ajoutcommentaire(pseudo, commentaire) {
   firebase.database().ref('Commentaires/' + pseudo).set({
-      pseudo: pseudo,
-      commentaire: commentaire,
+    pseudo: pseudo,
+    commentaire: commentaire,
 
   });
   affichercomm()
@@ -55,32 +56,32 @@ function ajoutcommentaire(pseudo, commentaire) {
 
 document.querySelector("#poster").addEventListener("click", function () {
   if (input1.value == "") {
-      console.log("error")
-      input1.value = ""
-      input2.value = ""
-      let p = document.createElement("p")
-      p.className = "alertecomm"
-      p.textContent = "Remplissez tous les champs pour poster"
-      setTimeout(() => {
-          refreshalert();
-      }, 2000);
-      document.querySelector("#error").prepend(p);
+    console.log("error")
+    input1.value = ""
+    input2.value = ""
+    let p = document.createElement("p")
+    p.className = "alertecomm"
+    p.textContent = "Remplissez tous les champs pour poster"
+    setTimeout(() => {
+      refreshalert();
+    }, 2000);
+    document.querySelector("#error").prepend(p);
   } else if (input2.value == "") {
-      console.log("error2")
-      input1.value = ""
-      input2.value = ""
-      let p = document.createElement("p")
-      p.className = "alertecomm"
-      p.textContent = "Remplissez tous les champs pour poster"
-      setTimeout(() => {
-          refreshalert();
-      }, 2000);
-      document.querySelector("#error").prepend(p);
+    console.log("error2")
+    input1.value = ""
+    input2.value = ""
+    let p = document.createElement("p")
+    p.className = "alertecomm"
+    p.textContent = "Remplissez tous les champs pour poster"
+    setTimeout(() => {
+      refreshalert();
+    }, 2000);
+    document.querySelector("#error").prepend(p);
   } else if (input1.value != "" && input2.value != "") {
-      console.log("ok");
-      ajoutcommentaire(input1.value, input2.value)
-      refreshcomm()
-      document.location.reload();
+    console.log("ok");
+    ajoutcommentaire(input1.value, input2.value)
+    refreshcomm()
+    document.location.reload();
   }
 });
 
@@ -104,6 +105,7 @@ function refreshalert() {
 //Fonction affichage tarif
 
 function infotarif1() {
+
   tarif = 1;
   creationinfotarif()
 
@@ -128,38 +130,32 @@ function infotarif4() {
 }
 
 function creationinfotarif() {
-  let info = "Prix Adulte standard"
-  let h1 = document.createElement("h2")
-  let img = document.createElement("img")
-  img.setAttribute("id", "zenyainfo");
-  img.src = "img/zenya.png";
-  img.style.width = "340px";
-  img.style.animation = "fadein 1s forwards";
-  img.style.color = "white";
-  img.style.display ="absolute"
-  h1.style.animation = "fadein 1s forwards";
-  h1.className = "infotarifp";
-  h1.setAttribute("id", "textinfo");
-  document.querySelector("#infotarif").appendChild(img);
-  document.querySelector("#infotarif2").appendChild(h1);
-
+  document.querySelector('#zenya').className = "actif"
+  let textinfo = document.querySelector("#textinfo")
+  textinfo.className = "actif2"
+  let text = document.createElement('h2')
+  
   if (tarif == 1) {
-      h1.textContent = "Tarif standard + 16 ans"
+
+    textinfo.textContent = "Tarif standard + 16 ans"
+
+
   } else if (tarif == 2) {
-      h1.textContent = "Tarif Junior - 16 ans"
+    textinfo.textContent = "Tarif Junior - 16 ans"
   } else if (tarif == 3) {
-      h1.textContent = "Pass 48H adulte + 16 ans "
+    textinfo.textContent = "Pass 48H adulte + 16 ans "
 
   } else if (tarif == 4) {
-      h1.textContent = "Pass 48H Junior - 16 ans "
+    textinfo.textContent = "Pass 48H Junior - 16 ans "
   }
 
 }
 
+
 function infotarifdelete() {
-  
-  document.querySelector("#zenyainfo").remove();
-  document.querySelector("#textinfo").remove();
+
+  document.querySelector("#zenya").className = "";
+  document.querySelector("#textinfo").className = "";
 
 }
 
@@ -232,16 +228,16 @@ function infotarifdelete() {
 //TODO ------------------------------------------------------------------------------- Social pop up button--------------------------
 //Facebook
 function facebook_pop_up() {
-    window.open('https://fr-fr.facebook.com/PlayOverwatch', 'Facebook', 'menubar=no, scrollbars=no, top=0, left=100, width=500, height=900');
+  window.open('https://fr-fr.facebook.com/PlayOverwatch', 'Facebook', 'menubar=no, scrollbars=no, top=0, left=100, width=500, height=900');
 }
 //Twitter
 function twitter_pop_up() {
-    window.open('https://twitter.com/OverwatchFR?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor', 'Twitter', 'menubar=no, scrollbars=no, top=0, left=100, width=500, height=900');
+  window.open('https://twitter.com/OverwatchFR?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor', 'Twitter', 'menubar=no, scrollbars=no, top=0, left=100, width=500, height=900');
 
 }
 //Youtube
 function youtube_pop_up() {
-    window.open('https://www.youtube.com/channel/UClOf1XXinvZsy4wKPAkro2A', 'Youtube', 'menubar=no, scrollbars=no, top=0, left=100, width=500, height=900');
+  window.open('https://www.youtube.com/channel/UClOf1XXinvZsy4wKPAkro2A', 'Youtube', 'menubar=no, scrollbars=no, top=0, left=100, width=500, height=900');
 
 }
 
@@ -415,4 +411,3 @@ function youtube_pop_up() {
 //     },
 //     "retina_detect": true
 //   });
-  

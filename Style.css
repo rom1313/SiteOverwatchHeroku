@@ -4,20 +4,54 @@
 }
 
 /*  HTML BODY FOOTER  */
+input,textarea{
+outline: none;
 
+}
 html {
     background-color: black;
     scroll-behavior: smooth;
-   
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#intro {
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1;
+    font-family: 'overwatchfont';
+    border: solid 1px rgb(0, 174, 218);
+    border-radius: 5px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    
+    background-image: url(img/comm.jpg);
+    
+    
+    background-position: center;
+}
+
+.dva {
+    grid-column: 1fr;
+    grid-row: 2fr;
+margin-left: 5vw;
+    width: 40vw;
 }
 
 body {
-  
+
+
+margin: 0%;
     background-image: url('img/fond.jpg');
     background-attachment: fixed;
     background-position: center;
-    box-sizing: border-box;
-    
+    display: flex;
+    flex-direction: column;
+
+
+
+
 }
 
 section {
@@ -26,14 +60,14 @@ section {
     background-color: rgb(80, 80, 80);
     background-image: url(img/comm.jpg);
     background-position: center;
-    
+
     font-family: "overwatchfont";
     justify-content: center;
-   
-    
-    
-        border-radius: 12px;
-        border: solid 2px black;
+
+
+
+    border-radius: 12px;
+    border: solid 2px black;
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
 }
 
@@ -45,13 +79,14 @@ ul {
     margin: auto;
     justify-content: center;
     list-style: none;
-    margin: 2px;
+    margin-top: 8px;
     padding: 3px;
     font-family: "overwatchfont";
     text-decoration: none;
     font-size: 30px;
     background-color: black;
     border: solid 5px black;
+    align-self: center;
 }
 
 li {
@@ -60,10 +95,11 @@ li {
     list-style: none;
     padding-left: 20px;
 }
-a:hover{
+
+a:hover {
 
 
-text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(0, 0, 0);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(0, 0, 0);
 
 }
 
@@ -77,27 +113,41 @@ a {
 #logo {
     height: 55px;
     position: absolute;
-    padding-left: 34px;
+margin-top: 10px;
+    transform: translate(34px, 0);
 }
 
 #video {
-    margin-top: 34PX;
-    margin-left: 80px;
-    width: 700px;
-    
 
+
+
+width: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 video {
+    margin-top: 4vh;
+    width: fit-content;
     height: 400px;
-    z-index: -1;
-    border: solid 1px rgb(0, 174, 218);box-shadow: 0px 0px 10px rgb(0, 0, 0),
+margin-right: 2vw;
+margin-bottom: 1vh;
+background-color: #000000;
+border: solid 1px rgb(0, 174, 218);
+box-shadow: 0px 0px 10px rgb(0, 0, 0),
     0px 0px 10px #000000;
+border-radius: 12px;
 }
 
 #dva {
-    width: 40%;
-    height: 30%;
-    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
 
 }
 
@@ -107,7 +157,8 @@ h1 {
     font-size: 45px;
     text-shadow: 1px 1px 2px rgb(29, 29, 29), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
 }
-h2{
+
+h2 {
     color: #ffffff;
     font-family: "overwatchfont";
     font-size: medium;
@@ -123,11 +174,11 @@ h2{
     display: flex;
     justify-content: center;
     text-shadow: 1px 1px 2px rgb(29, 29, 29), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
-     padding: 45px;
+    padding: 45px;
 }
 
-#infoparc{
-color: #ffffff;
+#infoparc {
+    color: #ffffff;
 
 
 }
@@ -138,7 +189,7 @@ color: #ffffff;
 #tarifs {
     background: url(img/TARIF.jpg) center;
     width: 600px;
-    height:350px;
+    height: 350px;
     border: solid 2px black;
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
         0px 0px 10px #000000;
@@ -148,41 +199,69 @@ color: #ffffff;
     margin: auto;
     margin-top: 24px;
     text-align: center;
-    
+
 
 
 }
-#infotarif{
- position: absolute;
-    width: 10%;
-    margin-left: 45px;
-    margin-top: 20px;  z-index: 2;
+#zenya{
+    opacity: 0;
+width: 80%;
+
 }
-#infotarif2{
+.actif{
+opacity: 1;
+animation: fadein2 1s forwards;
+}
+.actif2{
+    opacity: 1;
+    animation: fadein3 1s forwards;
+    }
+#textinfo{
+opacity: 0;
+
+}
+
+
+#infotarif {
     position: absolute;
-    width: 40%;
-    margin-left: 100px;
-    margin-top: 320px;  z-index: 2;
+    
+    z-index: 2;
+    top: 100%;
+    left: 0%;
+    margin-top: 90px;
+    
+    
+    
+    
+}
+
+#infotarif2 {
+    position: absolute;
+    top: 100%;
+    margin-top: 430px;
+    margin-left: 28px;
+    z-index: 2;
     color: #ffffff;
     display: flex;
-        
-        }
+
+}
 
 #tarifs>p {
-    
+
     padding-top: 5px;
     padding-bottom: 0px;
     line-height: 34px;
     cursor: help;
-  
+
 }
 
 #tariftitre {
-   font-size: 40px;
+    font-size: 40px;
 
-    
+
 
 }
+
 /*  ESPACE COMMENTAIRE  */
 .alertecomm {
 
@@ -191,11 +270,11 @@ color: #ffffff;
     color: #d30000;
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-   margin: auto;
-   text-shadow: 1px 1px 2px rgb(90, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
-   
-  
+
+    margin: auto;
+    text-shadow: 1px 1px 2px rgb(90, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+
+
 }
 
 
@@ -216,8 +295,8 @@ color: #ffffff;
     font-size: large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
-    0px 0px 10px #000000;
-   
+        0px 0px 10px #000000;
+
 
 }
 
@@ -226,7 +305,7 @@ color: #ffffff;
     font-size: large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
-    0px 0px 10px #000000;
+        0px 0px 10px #000000;
 
 
 }
@@ -242,51 +321,34 @@ color: #ffffff;
     width: 20px;
     animation: fadein 2s;
     padding-top: 5px;
- 
+
 
 
 
 }
 
-#commentairefirebase{
-text-align: center;
-display: list-item;
-background-color: #000000;
-width: 40%;
-margin: auto;
-margin-top: 20px;
-border-radius: 12px;
-background: url('img/comm.jpg');
-text-shadow: 1px 1px 2px rgb(29, 29, 29), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
-background-attachment:fixed;
-background-position: center;
+#commentairefirebase {
+    text-align: center;
+    display: list-item;
+    background-color: #000000;
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 12px;
+    background: url('img/comm.jpg');
+    text-shadow: 1px 1px 2px rgb(29, 29, 29), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+    background-attachment: fixed;
+    background-position: center;
 
 
 
-border: solid 1px rgb(214, 214, 214);
+    border: solid 1px rgb(214, 214, 214);
 }
 
 
 
 
-#bouttonactivitees{
-color: #ffffff;
-background-color: #000000;
-margin: auto;
-margin-top: 16PX;
-margin-bottom: 10px;
-font-size: 15PX;
-font-family: "overwatchfont";
-box-shadow: 0px 0px 10px rgb(0, 0, 0),
-        0px 0px 10px #000000;
-
-}
-#divbouttonactivitees{
-display: flex;
-justify-self: center;
-
-}
-#poster{
+#bouttonactivitees {
     color: #ffffff;
     background-color: #000000;
     margin: auto;
@@ -295,7 +357,26 @@ justify-self: center;
     font-size: 15PX;
     font-family: "overwatchfont";
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
-            0px 0px 10px #000000;
+        0px 0px 10px #000000;
+
+}
+
+#divbouttonactivitees {
+    display: flex;
+    justify-self: center;
+
+}
+
+#poster {
+    color: #ffffff;
+    background-color: #000000;
+    margin: auto;
+    margin-top: 16PX;
+    margin-bottom: 10px;
+    font-size: 15PX;
+    font-family: "overwatchfont";
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
 
 }
 
@@ -303,15 +384,16 @@ justify-self: center;
 #logotitre {
     width: 100%;
 }
-#news{
+
+#news {
     text-align: center;
 }
 
-header{
-display: grid;
-justify-items:center;
-background-color: black;
-padding-bottom: 12px;
+header {
+    display: grid;
+    justify-items: center;
+    background-color: black;
+    padding-bottom: 12px;
 }
 
 button>img {
@@ -331,10 +413,10 @@ nav {
 section {
     border: solid 1px rgb(0, 174, 218);
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
-    0px 0px 10px #000000;
+        0px 0px 10px #000000;
     border-radius: 12px;
     text-shadow: 1px 1px 2px rgb(29, 29, 29), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
-    
+
 
 }
 
@@ -356,26 +438,26 @@ core {
 #twitter,
 #youtube {
     text-decoration: none;
-align-items: center;
-padding: 23px;
+    align-items: center;
+    padding: 23px;
 
 }
 
-#twitter{
+#twitter {
 
-width: 50px;
+    width: 50px;
 
 }
 
 #facebook {
 
-width: 50px;
+    width: 50px;
 }
 
-#youtube{
+#youtube {
 
 
-width: 50px;
+    width: 50px;
 }
 
 #blizzard {
@@ -384,10 +466,11 @@ width: 50px;
 
 
 }
-#social{
 
-display: flex;
-justify-content: center;
+#social {
+
+    display: flex;
+    justify-content: center;
 
 
 }
@@ -412,12 +495,13 @@ h1 {
     color: #ffffff;
 }
 
-#overwatch{
-margin:0;
+#overwatch {
+    margin: 0;
 
 
 }
-footer{
+
+footer {
     font-family: "overwatchfont";
     padding: 15px;
 
@@ -439,10 +523,10 @@ footer{
 .carousel-inner {
     position: relative;
     overflow: hidden;
-    
+
 }
 
-.carousel-open:checked + .carousel-item {
+.carousel-open:checked+.carousel-item {
     position: static;
     opacity: 100;
 }
@@ -493,9 +577,9 @@ footer{
     color: #aaaaaa;
 }
 
-#carousel-1:checked ~ .control-1,
-#carousel-2:checked ~ .control-2,
-#carousel-3:checked ~ .control-3 {
+#carousel-1:checked~.control-1,
+#carousel-2:checked~.control-2,
+#carousel-3:checked~.control-3 {
     display: block;
 }
 
@@ -527,9 +611,9 @@ footer{
     color: #aaaaaa;
 }
 
-#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
     color: #428bca;
 }
 
@@ -545,6 +629,7 @@ footer{
     z-index: 9999;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
 }
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -553,96 +638,211 @@ footer{
 
     to {
         opacity: 1;
-        transform: translateX(19px);
+        
     }
+    
+}
+@keyframes fadein2 {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(20px);
+    }
+    
+}
+@keyframes fadein3 {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(45px);
+    }
+    
 }
 
+/* todo--------------------------------------- MEDIA QUERIES ---------------------------------------*/
 
 
-
-
-/* ---------------------------------------Responsive mediaquery tablette ---------------------------------------*/
+/* todo---------------------------------------Responsive mediaquery tablette ---------------------------------------*/
 
 @media(min-width: 760px) and (max-width: 1388px) {
-    video {
-        height: 345px;
+    body{
         
-        justify-self: center;
-       
+margin: 0%;
+
+        
+    }
+    .dva{
+        display: none;
+    }
+    #intro{
+        
+        display: flex;
+        justify-content: center;
+        
+    }
+   video{
+
+    margin-right: 0vw;
+   }
+    #video {
+        
+width: 640px;
     }
 
     ul {
-      font-size: 15px;
+        font-size: 15px;
     }
+
     #titre {
-       font-size: 15px;
+        font-size: 15px;
     }
-    #infotarif{
-        display: none;
-       }
-       #infotarif2{
-        display: none;
-       }
 
-       #dva {
-      display: none;
-    
+    #infotarif {
+        display: none;
     }
-    #commentairefirebase{
-    width: 70%;
+
+    #infotarif2 {
+        display: none;
     }
-    h1{
+
+    #dva {
+        display: none;
+
+    }
+
+    #commentairefirebase {
+        width: 70%;
+    }
+
+    h1 {
         font-size: 35px;
     }
-    
+
 }
 
-/* ---------------------------------------Responsive mediaquery phone ---------------------------------------*/
+/* todo ---------------------------------------Responsive mediaquery phone ---------------------------------------*/
+
 @media (max-width: 760px) {
-
-    BODY{
-width: 640px;
-
-margin: auto;
-
-}
-section{
-margin-top: 5px;
-
-
-}
-ul {
-    font-size: 13px;
-  }
-video {
-    height: 272px;
-   
-}
-
-
-#tarifs {
-    width: 80%;
     
-
-
-}
-#dva {
-   display: none;
-
-}
-#titre {
-    font-size: 15px;
- }
- #infotarif{
-    display: none;
-   }
-   #infotarif2{
-    display: none;
-   }
-   #commentairefirebase{
-    width: 80%;
+    #intro{
+        
+        display: flex;
+        justify-content: center;
+        
+        
     }
-    h1{
-        font-size: 35px;
+    body{
+        width: 100%;
+        margin: 0%;
+    }
+    #video {
+        
+        
+            }
+            
+    
+    
+    
+            #navigation{
+    width: 100vw; 
+      
+        
+       
+                
+            }
+    .dva{display: none;}
+    #dva {
+        display: none;
+
+    }
+
+    ul {
+        font-size: 13px;
+    }
+
+    video {
+        margin-right: 0vw;  
+        width: 300px;
+        height: 40%;
+    }
+
+#infoparc{
+    text-align: center;
+
+flex-direction: column;
+
+
+
+}
+#infoparc p{
+font-size: 12px;
+
+}
+    #tarifs {
+        width: 80%;
+
+
+
+    }
+
+    #dva {
+        display: none;
+
+    }
+
+    #titre {
+        font-size: 15px;
+    }
+
+    #infotarif {
+        display: none;
+    }
+
+    #infotarif2 {
+        display: none;
+    }
+
+    #commentairefirebase {
+        width: 80%;
+    }
+
+    h1#titre {
+        font-size: 15px;
+        padding: 0%;
+        width: 300px;
+        text-align: center;
+        margin-top: 9px;
+    }
+    header {
+        display: flex;
+        justify-items: center;
+        background-color: black;
+        padding-bottom: 12px;
+        width: 100%;
+    }
+    header a{
+font-size: 8px;
+
+    }
+    header li{
+        padding: 0%;
+    }
+
+    #logo_connexion2{
+
+        width: 40%;
+    }
+    #logo{
+        transform: translate(12px, 0px);
+height: 40px;
+
     }
 }

@@ -49,7 +49,7 @@ let allowCrossDomain = function(req, res, next) {
 //TODO ------- CONNECTION MARIADB -------------------------
 //TODO ----------------------------------------------------
 
-/* var mysql      = require('mysql');
+var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
@@ -57,7 +57,7 @@ var connection = mysql.createConnection({
   database: 'projetfilerouge',
   port:"3307"
 });
-connection.connect(); */
+connection.connect();  
 
 //TODO ----------------------------------------------------
 //TODO ------- GetMapping Requête et Réponses -----
