@@ -1,6 +1,7 @@
 @font-face {
     font-family: "overwatchfont";
     src: url('font/OPTIBankGothic-Medium.otf');
+    font-display: fallback;
 }
 
 @keyframes fadein {
