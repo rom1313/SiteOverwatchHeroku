@@ -5,12 +5,17 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const jsonParser = bodyParser.json()
-const port = process.env.PORT|| 13000
+const port = process.env.PORT || 13000
+const compression = require('compression')
+const optimus = require('connect-image-optimus');
+
+
+
 //TODO ----------------------------------------------
 //TODO ------- AJOUT DE SOKET.IO-----
 //TODO ----------------------------------------------
 const server = require('http').Server(app)
-const helmet = require("helmet");
+ const helmet = require("helmet"); 
 
 //TODO ----------------------------------------------
 //TODO ------- LANCEMENT ECOUTE-----
@@ -23,7 +28,7 @@ server.listen(process.env.PORT || 13000, () => {
 //TODO -----------------------------------------------------------
 //TODO ------- Déclaration des fichiers static utilisé-----
 //TODO -----------------------------------------------------------
-app.use(helmet());
+ 
 var publicDir = require('path').join(__dirname, '');
 app.use(express.static(publicDir));
 app.use(express.static('static'));
@@ -33,6 +38,12 @@ app.use('', express.static('Style2.css'));
 app.use('', express.static('Script.js'));
 app.use('', express.static('extension.js'));
 app.use('', express.static('Script2.js'));
+app.use(helmet({ contentSecurityPolicy: (process.env.NODE_ENV === 'production') ? undefined : false }));  
+app.use(compression())
+
+var staticPath = __dirname + '/static/';
+
+app.use(optimus(publicDir));
 
 
 //TODO --------------------------------------------------------------------------------------
@@ -132,3 +143,7 @@ app.post('/mariaDBreservation',jsonParser, (req, res) => {
       console.log(query.sql);
     })
 
+    process.on('uncaughtException', function (err) {
+      console.error(err);
+      console.log("Node NOT Exiting...");
+    });

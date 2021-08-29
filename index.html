@@ -3,10 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Overwatch World</title>
-  
+  <meta
+  http-equiv="Content-Security-Policy"
+  content="default-src * 'unsafe-inline'; img-src * data:*"
+/>
+
   <link rel="stylesheet" href="Style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/png" href="img/favicon.png" />
@@ -32,7 +36,7 @@
     <div id="video">
       <video autoplay="autoplay" loop="loop" muted="muted">
         
-        <source src="https://file-rouge-4a901.firebaseapp.com/video/Trailer.mp4" type="video/mp4">
+      <source src="https://file-rouge-4a901.firebaseapp.com/video/Trailer.mp4" type="video/mp4"> 
       </video>
       <div id="infoparc">
       <h1 id="overwatch">Overwatch World</h1>
