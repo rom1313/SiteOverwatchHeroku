@@ -201,15 +201,24 @@ function refreshalert() {
 
   return
 }
-
+let indicecom;
 let text = document.createElement("p")
 const reponseJson2 = async () => {
- 
+  
   text.innerHTML = ""
-  const data = await fetch('http://localhost:13000/mariaDBcomms');
-
-  const data2 = await data.json();
- let nb = nombrealeatoire(data2.length)
+ const data = await fetch('http://localhost:13000/mariaDBcomms');
+ const data2 = await data.json();
+  let nb = nombrealeatoire(data2.length)
+  if (nb === indicecom && nb>data2.length) {
+    nb++
+    indicecom = nb++
+  }
+  else if (nb === indicecom && nb === data2.length) {
+    nb--
+    indicecom = nb--
+  }
+   indicecom=nb
+  
   text.className = "commmaria"
   text.textContent = data2[nb].pseudo + " : " + data2[nb].commentaire
   document.querySelector("#commmaria").appendChild(text)
