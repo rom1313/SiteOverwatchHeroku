@@ -268,7 +268,7 @@ function postreservation() {
     bouttonlaser.disabled = "true"
     bouttonlaser.style.color = "grey"
     bouttonvalider.style.color = "grey"
-    bouttonvalider.disabled = "true"
+    bouttonvalider.remove()
     inputnom.disabled = "true"
     inputdate.disabled = "true"
     bouttontele.style.display = "initial"
@@ -278,6 +278,7 @@ function postreservation() {
     let code = nombrealeatoire(344)
     let rescode = codereservation + code
     codefinal = rescode
+    
     fetch('http://localhost:13000/mariaDBreservation', {
         method: 'post',
         headers: {
@@ -291,7 +292,7 @@ function postreservation() {
           code: rescode
         })
       }).then(res => res.json())
-      .then(res => console.log(res))
+      .then((res) => {bouttonvalider.remove();})
 
 
 

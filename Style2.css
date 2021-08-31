@@ -239,7 +239,7 @@ font-family: 'overwatchfont';
     border: solid 1px rgb(25, 220, 255);
     margin-top: 23px;
     background: url('img/RESERVATION.jpg');
-    background-position: initial;
+    background-size: cover;
     color: white;
     ;
 }

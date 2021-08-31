@@ -31,7 +31,8 @@ function affichercomm() {
       let commentaire;
       pseudo = data.pseudo
       commentaire = data.commentaire
-
+      console.log(pseudo)
+      console.log(commentaire)
       p.className = "comms"
       p.innerHTML = pseudo + " " + ":  " + "  " + commentaire;
       document.querySelector("#espacecomm").appendChild(p)
@@ -79,9 +80,14 @@ document.querySelector("#poster").addEventListener("click", function () {
     document.querySelector("#error").prepend(p);
   } else if (input1.value != "" && input2.value != "") {
     console.log("ok");
+    Number(input1.value)
+    
     ajoutcommentaire(input1.value, input2.value)
-    refreshcomm()
-    document.location.reload();
+     refreshcomm() 
+  
+ window.location.href = 'index.html#espacecomm';
+window.location.reload(true);  
+
   }
 });
 
