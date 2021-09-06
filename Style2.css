@@ -107,9 +107,10 @@ h1 {
 }
 
 #error {
-  top: 80%;
-  left: 25%;
-position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
 
 #activitees {
@@ -126,7 +127,7 @@ position: absolute;
     height: 600px;
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
         0px 0px 10px #000000;
-        position: relative;
+    position: relative;
 }
 
 
@@ -152,10 +153,6 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-
-
-
-
 }
 
 .jaime {
@@ -164,8 +161,8 @@ body {
 
 #commmaria {
 
-   
-    
+
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,7 +214,7 @@ body {
 #bodypainting,
 #spectales {
 
-    margin: 30px;
+   
 
 
 
@@ -229,8 +226,6 @@ body {
 #bodypainting>div,
 #spectales>div {
     padding: 4px;
-
-
     margin: auto;
     margin-top: 20px;
     width: max-content;
@@ -245,7 +240,9 @@ body {
 #apercu {
     background-color: aliceblue;
     width: 30VW;
-    margin: auto;
+    height: 25vw;
+    justify-self: center;
+    align-self: center;
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
         0px 0px 10px #000000;
     font-family: "overwatchfont";
@@ -257,6 +254,10 @@ body {
     color: white;
     position: relative;
     padding-bottom: 85px;
+    max-height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    
 }
 
 div>button {
@@ -280,8 +281,11 @@ div>button:hover {
 span {
     color: rgb(240, 136, 0);
     background-color: #000000;
-
-
+    position: relative;
+    max-width: max-content;
+    margin: 0%;
+  
+    
 }
 
 #bouttonbody {
@@ -361,18 +365,22 @@ footer {
 /* todo ---------------------------------------Responsive mediaquery tablette ---------------------------------------*/
 
 @media only screen and (max-width: 1024px) {
-    h1{font-size: 5vw;}
+    h1 {
+        font-size: 5vw;
+    }
+
     #activitees {
         width: 90vw;
-background-size: cover;
-background-position: center;
-position: relative;
+        background-size: cover;
+        background-position: center;
+        position: relative;
 
     }
 
     #reservationajout {
         width: 90vw;
-
+        box-sizing: border-box;
+        position: relative;
 
 
     }
@@ -391,12 +399,13 @@ position: relative;
 
         font-size: 18px;
     }
-    .commmaria{
+
+    .commmaria {
         font-size: 17px;
         top: 90%;
-        
-        
-          }
+
+
+    }
 
 }
 
@@ -410,16 +419,14 @@ position: relative;
 
 
     }
-#navigation li{
 
+    #navigation li {}
 
+    ul {
+        font-size: 12px;
 
+    }
 
-}
-ul{
-font-size: 12px;
-
-}
     header a {
 
 
@@ -460,25 +467,30 @@ font-size: 12px;
 
 
     }
-    #descriptionactivitees{
-    font-size: 3vw;
+
+    #descriptionactivitees {
+        font-size: 3vw;
 
 
     }
-    #apercu{
-    width: 80vw;
-background-position: center;
-position: relative;
+
+    #apercu {
+        width: 80vw;
+        height: 80vw;
+        background-position: center;
+        position: relative;
 
     }
-  .commmaria{
-font-size: 7px;
-top: 90%;
+
+    .commmaria {
+        font-size: 7px;
+        top: 90%;
 
 
-  }
-  footer{
-font-size: 12px;
+    }
 
-  }
+    footer {
+        font-size: 12px;
+
+    }
 }

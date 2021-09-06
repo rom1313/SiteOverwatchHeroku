@@ -1,26 +1,36 @@
-//TODO ------------------------------------------------------------------------------- Firebase project reference --------------------------
-var firebaseConfig = {
-  apiKey: "AIzaSyCjt7oH7dSZLpdVDC8Uc0h3YzSOiiqQYqQ",
-  authDomain: "file-rouge-4a901.firebaseapp.com",
-  databaseURL: "https://file-rouge-4a901-default-rtdb.firebaseio.com",
-  projectId: "file-rouge-4a901",
-  storageBucket: "file-rouge-4a901.appspot.com",
-  messagingSenderId: "1052502489361",
-  appId: "1:1052502489361:web:d5b6f0f47dbc0f2bb934b0",
-  measurementId: "G-3JHZM4ZMZQ"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
 //TODO ------------------------------------------------------------------------------- App and variables --------------------------
 
 affichercomm()
 
 let input1 = document.querySelector("#pseudoinput")
 let input2 = document.querySelector("#comminput")
-
+let donnes;
+let data
 function affichercomm() {
+    
+  
+  fetch('https://apiildaa.herokuapp.com/commsfilerouge')
+  .then((res) => res.json())
+    .then((json) => {
+      donnes = json
+      donnes.forEach(element => {
+        console.log(element)
+      let p = document.createElement("p")
+      let commss = document.querySelector("#espacecomm"); 
+      let pseudo;
+      let commentaire;
+      pseudo = element.pseudo
+        commentaire = element.commentaire
+        p.className = "comms"
+      p.innerHTML = pseudo + " " + ":  " + "  " + commentaire;
+      document.querySelector("#espacecomm").appendChild(p)
+      });
+      
+      console.log(donnes)
+    });
 
-  ref = firebase.database().ref('Commentaires/')
+
+ /*  ref = firebase.database().ref('Commentaires/')
   ref.on("value", function (snapshot) {
 
     snapshot.forEach(function (childSnapshot) {
@@ -40,17 +50,34 @@ function affichercomm() {
 
 
     return
-  })
+  }) */
+
 }
 //TODO -------------------------------------------------------------------------------  Constructeur commentaire firebase --------------------------
 
 function ajoutcommentaire(pseudo, commentaire) {
-  firebase.database().ref('Commentaires/' + pseudo).set({
+  /* firebase.database().ref('Commentaires/' + pseudo).set({
     pseudo: pseudo,
     commentaire: commentaire,
 
-  });
-  affichercomm()
+  }); */
+
+  fetch('https://apiildaa.herokuapp.com/commsfilerougeajout', {
+    method: 'post',
+    mode: 'cors',
+    headers: {
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      pseudo: pseudo,
+      comm : commentaire
+    })
+  }).then(res => {affichercomm() } )
+  
+
+
+ 
 }
 
 //TODO ------------------------------------------------------------------------------- Ajout de commentaire firebase --------------------------
@@ -83,10 +110,11 @@ document.querySelector("#poster").addEventListener("click", function () {
     Number(input1.value)
     
     ajoutcommentaire(input1.value, input2.value)
-     refreshcomm() 
+     window.location.href = 'index.html#espacecomm';
+    window.location.reload(true); 
+    refreshcomm()
   
- window.location.href = 'index.html#espacecomm';
-window.location.reload(true);  
+   
 
   }
 });
@@ -111,28 +139,23 @@ function refreshalert() {
 //Fonction affichage tarif
 
 function infotarif1() {
-
   tarif = 1;
   creationinfotarif()
-
 }
 
 function infotarif2() {
   tarif = 2;
   creationinfotarif()
-
 }
 
 function infotarif3() {
   tarif = 3;
   creationinfotarif()
-
 }
 
 function infotarif4() {
   tarif = 4;
   creationinfotarif()
-
 }
 
 function creationinfotarif() {
@@ -142,19 +165,17 @@ function creationinfotarif() {
   let text = document.createElement('h2')
   
   if (tarif == 1) {
-
     textinfo.textContent = "Tarif standard + 16 ans"
-
-
-  } else if (tarif == 2) {
+  }
+  else if (tarif == 2) {
     textinfo.textContent = "Tarif Junior - 16 ans"
-  } else if (tarif == 3) {
+  }
+  else if (tarif == 3) {
     textinfo.textContent = "Pass 48H adulte + 16 ans "
-
-  } else if (tarif == 4) {
+  }
+  else if (tarif == 4) {
     textinfo.textContent = "Pass 48H Junior - 16 ans "
   }
-
 }
 
 
