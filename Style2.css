@@ -17,9 +17,13 @@
 html {
     background-color: black;
     scroll-behavior: smooth;
-    margin: 0%;
-    box-sizing: border-box;
-    width: 100%;
+    
+    margin: 0;
+    padding: 0%;
+    
+    
+   
+    
 }
 
 button {
@@ -35,10 +39,11 @@ textarea {
 
 /*  NAVIGATION  */
 header {
-
     justify-items: center;
     background-color: black;
     padding-bottom: 12px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
 }
 
 ul {
@@ -80,9 +85,9 @@ a {
 #logo {
     height: 55px;
     position: absolute;
-    margin-top: 10px;
-    transform: translate(34px, 0);
-    left: 2px;
+margin-top: 10px;
+transform: translate(34px, 0);
+   
 }
 
 .alertecomm {
@@ -104,6 +109,10 @@ h1 {
     color: #ffffff;
     font-family: "overwatchfont";
     text-shadow: 1px 1px 2px rgb(29 29 29), 0 0 1em rgb(0 0 0), 0 0 0.2em rgb(0 0 0);
+    margin: auto;
+    margin-top:34px;
+    margin-bottom: 34px;
+
 }
 
 #error {
@@ -144,15 +153,16 @@ h1 {
 }
 
 body {
-
-
-    margin: 0%;
     background-image: url('img/fond.jpg');
     background-attachment: fixed;
     background-position: center;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+    justify-self: center;
+    align-self: center;
 }
 
 .jaime {
@@ -160,17 +170,12 @@ body {
 }
 
 #commmaria {
-
-
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-align: center;
     border-radius: 23px;
     text-shadow: 1px 1px 2px rgb(0, 180, 171), 0 0 1em rgb(0, 152, 199), 0 0 0.2em rgb(0, 0, 0);
-
     animation: fadein 2s;
 }
 
@@ -210,17 +215,7 @@ body {
         0px 0px 10px #000000;
 }
 
-#lasergame,
-#bodypainting,
-#spectales {
 
-   
-
-
-
-
-
-}
 
 #lasergame>div,
 #bodypainting>div,
@@ -240,7 +235,7 @@ body {
 #apercu {
     background-color: aliceblue;
     width: 30VW;
-    height: 25vw;
+    height: 35vh;
     justify-self: center;
     align-self: center;
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
@@ -257,6 +252,7 @@ body {
     max-height: 100%;
     box-sizing: border-box;
     position: relative;
+    text-align: center;
     
 }
 
@@ -362,135 +358,745 @@ footer {
     padding: 15px;
 }
 
-/* todo ---------------------------------------Responsive mediaquery tablette ---------------------------------------*/
+/* todo ---------------------------------------Responsive mediaquery 1920 ---------------------------------------*/
+@media (min-width: 1920px) {
+    html{
 
-@media only screen and (max-width: 1024px) {
-    h1 {
-        font-size: 5vw;
-    }
-
-    #activitees {
-        width: 90vw;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-
-    }
-
-    #reservationajout {
-        width: 90vw;
         box-sizing: border-box;
         position: relative;
+        overflow-y:scroll;
+        overflow-x: hidden;
+        box-sizing: content-box;
+     }
+     header{
+         padding-bottom: 3px;
+         display: flex;
+         justify-items: center;
+         background-color: black;
+         
+         width: 100%;
+     }
+     header a {
+    
+    
+        font-size: 35px;
+     }
+     ul{
+    
+    font-size: 13px;
+    
+     }
+        header li{
+    
+    padding: 0%;
+    margin: 0px;
+    margin-left: 65px;
+    text-align: center;
+    
+      }
+      #img1,#img2,#img3{
+    width: 25vw;
+    
+    
+      }
+      div #bodypainting, div #spectales, div #lasergame{
+    text-align: center;
+    margin: 9px;
+    
+    
+    
+    
+      }
+      div #bodypainting p,div #spectales p,div #lasergame p{
+font-size: 32px;
 
 
+      }
+      #ajoutbody, #bouttonscpectacle,#bouttonlaser{
+    font-size: 30px;
+    
+    
+    
+      }
+      #navigation{
+          margin: 0%;
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+       
+        margin: auto;
     }
+                #logo{
+    
+                    transform: translate(12px, 0px);
+                    height: 80px;
+                    margin-top: 2px;
+                }
+                #reservationajout p{
+    
+    
+                    font-size: 9px;
+                }
+                h1{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 50px;
+                }
+                #activitees{
+    width: 70vw;
+    height: 85vh;
+    background-position: center;
+    background-size: cover;
+    
+                }
+                #descriptionactivitees p{
+    font-size: 40px;
+    margin-top: 9px;
+    
+    
+                }
+                .commmaria{
+                    font-size: 20px;
+                    margin-top: 0;
+                }
+                #jaime P{
+                    margin-top: 60px;
+                    font-size: 40px;
+                }
+                #reservationajout{
+                    width: 84vw;
+                    height: 55vh;
+    
+                }
+                #apercu{
+    width: 60vw;
+    height: 40vh;
+    background-position: center;
+    font-size: 25px;
+    
+                }
+                input{font-size: 20px;}
+                footer{
+    font-size: 32px;
+    
+    
+                }
+                #jaimeboutton{
+font-size: 40px;
 
-    #spectales img,
-    #lasergame img,
-    #bodypainting img {
-        width: 20vw;
+                }  
+}
+@media (min-width: 1440px) and (max-width: 1919px) {
+    html{
+
+        box-sizing: border-box;
+        position: relative;
+        overflow-y:scroll;
+        overflow-x: hidden;
+        box-sizing: content-box;
+     }
+     header{
+         padding-bottom: 3px;
+         display: flex;
+         justify-items: center;
+         background-color: black;
+         
+         width: 100%;
+     }
+     header a {
+    
+    
+        font-size: 35px;
+     }
+     ul{
+    
+    font-size: 13px;
+    
+     }
+        header li{
+    
+    padding: 0%;
+    margin: 0px;
+    margin-left: 55px;
+    text-align: center;
+    
+      }
+      #img1,#img2,#img3{
+    width: 25vw;
+    
+    
+      }
+      div #bodypainting, div #spectales, div #lasergame{
+    text-align: center;
+    margin: 9px;
+    
+    
+    
+    
+      }
+      div #bodypainting p,div #spectales p,div #lasergame p{
+font-size: 32px;
 
 
-
+      }
+      #ajoutbody, #bouttonscpectacle,#bouttonlaser{
+    font-size: 30px;
+    
+    
+    
+      }
+      #navigation{
+          margin: 0%;
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+       
+        margin: auto;
     }
+                #logo{
+    
+                    transform: translate(12px, 0px);
+                    height: 70px;
+                    margin-top: 5px;
+                }
+                #reservationajout p{
+    
+    
+                    font-size: 9px;
+                }
+                h1{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 50px;
+                }
+                #activitees{
+    width: 70vw;
+    height: 65vh;
+    background-position: center;
+    background-size: cover;
+    
+                }
+                #descriptionactivitees p{
+    font-size: 30px;
+    margin-top: 9px;
+    
+    
+                }
+                .commmaria{
+                    font-size: 30px;
+                    margin-top: 0;
+                }
+                #jaime P{
+                    margin-top: 40px;
+                    font-size: 40px;
+                }
+                #reservationajout{
+                    width: 84vw;
+                    height: 55vh;
+    
+                }
+                #apercu{
+    width: 60vw;
+    height: 40vh;
+    background-position: center;
+    font-size: 25px;
+    
+                }
+                input{font-size: 20px;}
+                footer{
+    font-size: 32px;
+    
+    
+                }
+                #jaimeboutton{
+font-size: 40px;
 
-    header a {
+                }
+      
+}
+/* todo ---------------------------------------Responsive Ipa ---------------------------------------*/
 
+@media (min-width: 1024px) and (max-width: 1439px) {
+    html{
 
-        font-size: 18px;
+        box-sizing: border-box;
+        position: relative;
+        overflow-y:scroll;
+        overflow-x: hidden;
+        box-sizing: content-box;
+     }
+     header{
+         padding-bottom: 3px;
+         display: flex;
+         justify-items: center;
+         background-color: black;
+         
+         width: 100%;
+     }
+     header a {
+    
+    
+        font-size: 25px;
+     }
+     ul{
+    
+    font-size: 13px;
+    
+     }
+        header li{
+    
+    padding: 0%;
+    margin: 0px;
+    margin-left: 35px;
+    text-align: center;
+    
+      }
+      #img1,#img2,#img3{
+    width: 26vw;
+    
+    
+      }
+      div #bodypainting, div #spectales, div #lasergame{
+    text-align: center;
+    margin: 9px;
+    
+    
+    
+    
+      }
+      #ajoutbody, #bouttonscpectacle,#bouttonlaser{
+    font-size: 22px;
+    
+    
+    
+      }
+      #navigation{
+          margin: 0%;
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+       
+        margin: auto;
     }
+                #logo{
+    
+                    transform: translate(12px, 0px);
+                    height: 50px;
+                    margin-top: 5px;
+                }
+                #reservationajout p{
+    
+    
+                    font-size: 9px;
+                }
+                h1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 35px;
+                }
+                #activitees{
+    width: 90vw;
+    height: 45vh;
+    background-position: center;
+    background-size: cover;
+    
+                }
+                #descriptionactivitees p{
+    font-size: 25px;
+    margin-top: 9px;
+    
+    
+                }
+                .commmaria{
+                    font-size: 16px;
+                    margin-top: 0;
+                }
+                #jaime P{
+                    margin-top: 40px;
+                    font-size: 30px;
+                }
+                #reservationajout{
+                    width: 94vw;
+                    height: 29vh;
+    
+                }
+                #apercu{
+    width: 80vw;
+    height: 30vh;
+    background-position: center;
+    font-size: 23px;
+    
+                }
+                input{font-size: 20px;}
+                footer{
+    font-size: 12px;
+    
+    
+                }
+                #jaimeboutton{
+font-size: 30px;
 
-    .commmaria {
-        font-size: 17px;
-        top: 90%;
+                }
+   
+}
+/* todo ---------------------------------------Responsive iPAD ---------------------------------------*/
 
+@media (min-width: 768px) and (max-width: 1023px) {
 
+    html{
+
+        box-sizing: border-box;
+        position: relative;
+        overflow-y:scroll;
+        overflow-x: hidden;
+        box-sizing: content-box;
+     }
+     header{
+         padding-bottom: 3px;
+         display: flex;
+         justify-items: center;
+         background-color: black;
+         
+         width: 100%;
+     }
+     header a {
+    
+    
+        font-size: 20px;
+     }
+     ul{
+    
+    font-size: 13px;
+    
+     }
+        header li{
+    
+    padding: 0%;
+    margin: 0px;
+    margin-left: 20px;
+    text-align: center;
+    
+      }
+      #img1,#img2,#img3{
+    width: 26vw;
+    
+    
+      }
+      div #bodypainting, div #spectales, div #lasergame{
+    text-align: center;
+    margin: 9px;
+    
+    
+    
+    
+      }
+      #ajoutbody, #bouttonscpectacle,#bouttonlaser{
+    font-size: 16px;
+    
+    
+    
+      }
+      #navigation{
+          margin: 0%;
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+       
+        margin: auto;
     }
+                #logo{
+    
+                    transform: translate(12px, 0px);
+                    height: 38px;
+                    margin-top: 5px;
+                }
+                #reservationajout p{
+    
+    
+                    font-size: 9px;
+                }
+                h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 29px;
+                }
+                #activitees{
+    width: 90vw;
+    height: 45vh;
+    background-position: center;
+    background-size: cover;
+    
+                }
+                #descriptionactivitees p{
+    font-size: 18px;
+    margin-top: 2px;
+    
+    
+                }
+                .commmaria{
+                    font-size: 12px;
+                    margin-top: 0;
+                }
+                #jaime P{
+                    margin-top: 40px;
+                    font-size: 20px;
+                }
+                #reservationajout{
+                    width: 94vw;
+                    height: 29vh;
+    
+                }
+                #apercu{
+    width: 80vw;
+    height: 30vh;
+    background-position: center;
+    
+                }
+                footer{
+    font-size: 12px;
+    
+    
+                }
+
+}
+/* todo ---------------------------------------Responsive iPHONE 7 etc ---------------------------------------*/
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+    html{
+
+        box-sizing: border-box;
+        position: relative;
+        overflow-y:scroll;
+        overflow-x: hidden;
+        box-sizing: content-box;
+     }
+     header{
+         padding-bottom: 3px;
+         display: flex;
+         justify-items: center;
+         background-color: black;
+         
+         width: 100%;
+     }
+     header a {
+    
+    
+        font-size: 8px;
+     }
+     ul{
+    
+    font-size: 13px;
+    
+     }
+        header li{
+    
+    padding: 0%;
+    margin: 0px;
+    margin-left: 20px;
+    text-align: center;
+    
+      }
+      #img1,#img2,#img3{
+    width: 26vw;
+    
+    
+      }
+      div #bodypainting, div #spectales, div #lasergame{
+    text-align: center;
+    margin: 9px;
+    
+    
+    
+      }
+      #ajoutbody, #bouttonscpectacle,#bouttonlaser{
+    font-size: 10px;
+    
+    
+    
+      }
+      #navigation{
+          margin: 0%;
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+       
+        margin: auto;
+    }
+                #logo{
+    
+                    transform: translate(12px, 0px);
+                    height: 30px;
+                    margin-top: 5px;
+                }
+                #reservationajout p{
+    
+    
+                    font-size: 9px;
+                }
+                h1{
+    margin-top: 14px;
+    margin-bottom: 14px;
+    
+                    font-size: 20px;
+                }
+                #activitees{
+    width: 90vw;
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+    
+                }
+                #descriptionactivitees p{
+    font-size: 10px;
+    margin-top: 2px;
+    
+    
+                }
+                .commmaria{
+                    font-size: 6px;
+                    margin-top: 0;
+                }
+                #jaime P{
+                    margin-top: 20px;
+                    font-size: 15px;
+                }
+                #reservationajout{
+                    width: 94vw;
+                    height: 29vh;
+    
+                }
+                #apercu{
+    width: 90vw;
+    height: 45vh;
+    background-position: center;
+    
+                }
+                footer{
+    font-size: 12px;
+    
+    
+                }  
 
 }
 
 
-@media only screen and (max-width: 670px) {
+/* todo ---------------------------------------Responsive iPHONE 6 ---------------------------------------*/
 
-    #activitees {
-        width: 90vw;
-        height: 80vw;
-        background-size: cover;
+@media (min-width: 375px) and (max-width: 413px) {
+ 
+ html{
+
+    box-sizing: border-box;
+    position: relative;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    box-sizing: content-box;
+ }
+ header{
+     padding-bottom: 3px;
+     display: flex;
+     justify-items: center;
+     background-color: black;
+     
+     width: 100%;
+ }
+ header a {
 
 
-    }
+    font-size: 8px;
+ }
+ ul{
 
-    #navigation li {}
+font-size: 13px;
 
-    ul {
-        font-size: 12px;
+ }
+    header li{
 
-    }
+padding: 0%;
+margin: 0px;
+margin-left: 20px;
+text-align: center;
 
-    header a {
+  }
+  #img1,#img2,#img3{
+width: 26vw;
 
 
-        font-size: 2VW;
-        margin: 0%;
-    }
-
-    header li {
-        margin: 0%;
-
-    }
-
-    #logo {
-        transform: translate(12px, 0px);
-        height: 40px;
-    }
-
-    #spectales,
-    #lasergame,
-    #bodypainting {
-        width: 20vw;
-        margin: 4%;
-        font-size: 2vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    #spectales button,
-    #lasergame button,
-    #bodypainting button {
-        width: fit-content;
-        font-size: 3vw;
+  }
+  div #bodypainting, div #spectales, div #lasergame{
+text-align: center;
+margin: 9px;
 
 
 
-
-    }
-
-    #descriptionactivitees {
-        font-size: 3vw;
+  }
+  #ajoutbody, #bouttonscpectacle,#bouttonlaser{
+font-size: 10px;
 
 
-    }
 
-    #apercu {
-        width: 80vw;
-        height: 80vw;
-        background-position: center;
-        position: relative;
+  }
+  #navigation{
+      margin: 0%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+   
+    margin: auto;
+}
+            #logo{
 
-    }
+                transform: translate(12px, 0px);
+                height: 30px;
+                margin-top: 5px;
+            }
+            #reservationajout p{
 
-    .commmaria {
-        font-size: 7px;
-        top: 90%;
+
+                font-size: 9px;
+            }
+            h1{
+margin-top: 14px;
+margin-bottom: 14px;
+
+                font-size: 20px;
+            }
+            #activitees{
+width: 90vw;
+height: 40vh;
+background-position: center;
+background-size: cover;
+
+            }
+            #descriptionactivitees p{
+font-size: 10px;
+margin-top: 2px;
 
 
-    }
+            }
+            .commmaria{
+                font-size: 6px;
+                margin-top: 0;
+            }
+            #jaime P{
+                margin-top: 20px;
+                font-size: 15px;
+            }
+            #reservationajout{
+                width: 94vw;
+                height: 29vh;
 
-    footer {
-        font-size: 12px;
+            }
+            #apercu{
+width: 90vw;
+height: 50vh;
+background-position: center;
 
-    }
+            }
+            footer{
+font-size: 12px;
+
+
+            }
 }
