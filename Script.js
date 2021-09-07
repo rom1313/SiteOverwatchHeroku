@@ -1,5 +1,7 @@
 //TODO ------------------------------------------------------------------------------- App and variables --------------------------
 
+const { json } = require("express/lib/response");
+
 affichercomm()
 
 let input1 = document.querySelector("#pseudoinput")
@@ -73,7 +75,11 @@ function ajoutcommentaire(pseudo, commentaire) {
       pseudo: pseudo,
       comm : commentaire
     })
-  }).then(res => {affichercomm() } )
+  }).then((res) => res.json())
+    .then((json)=> {
+    console.log(json)
+    affichercomm()
+  })
   
 
 
