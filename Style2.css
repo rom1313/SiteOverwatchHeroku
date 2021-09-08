@@ -235,7 +235,7 @@ body {
 #apercu {
     background-color: aliceblue;
     width: 30VW;
-    height: 35vh;
+    
     justify-self: center;
     align-self: center;
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
@@ -535,7 +535,7 @@ footer {
 
 
 /* todo ---------------------------------------Responsive 1440 ---------------------------------------*/
-@media only screen and (min-width: 1440px) and (max-width: 1559px) {
+@media only screen and (min-width: 1444px) and (max-width: 1559px) {
     html {
 
         box-sizing: border-box;
@@ -1270,7 +1270,7 @@ footer {
 
     #apercu {
         width: 90vw;
-        height: 50vh;
+        height: 90vw;
         background-position: center;
 
     }
