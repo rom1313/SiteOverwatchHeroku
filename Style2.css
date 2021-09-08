@@ -498,7 +498,7 @@ footer {
         width: 55vw;
         height: 28vw;
         background-position: center;
-        font-size: 30px;
+        font-size: 20px;
 
     }
 
@@ -1124,7 +1124,7 @@ footer {
 
     #apercu {
         width: 90vw;
-        height: 45vh;
+        
         background-position: center;
 
     }
@@ -1202,7 +1202,7 @@ footer {
     #ajoutbody,
     #bouttonscpectacle,
     #bouttonlaser {
-        font-size: 10px;
+        font-size: 6px;
 
 
 
@@ -1270,7 +1270,7 @@ footer {
 
     #apercu {
         width: 90vw;
-        height: 90vw;
+       
         background-position: center;
 
     }
