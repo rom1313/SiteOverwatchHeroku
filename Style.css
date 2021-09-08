@@ -293,9 +293,9 @@ opacity: 0;
     margin-top: 25px;
     margin-bottom: 15px;
     padding-bottom: 14px;
-    font-size: 10px;
+    font-size: 15px;
     font-family: "overwatchfont", Courier, monospace;
-    line-height: 20px;
+    line-height: 40px;
     color: #ffffff;
     
    
@@ -352,7 +352,8 @@ opacity: 0;
     background-size: cover;
     list-style: none;
     overflow: hidden;
-
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+    0px 0px 10px #000000;
     border: solid 1px rgb(214, 214, 214);
 }
 
@@ -683,21 +684,110 @@ font-size: 12px;
 /* todo--------------------------------------- MEDIA QUERIES ---------------------------------------*/
 
 
-/* todo---------------------------------------Responsive mediaquery tablette ---------------------------------------*/
-@media screen and (min-width: 1920px) {
+/* todo---------------------------------------Responsive mediaquery 1920 ---------------------------------------*/
+@media only screen and (min-width: 1920px) {
 video{
 height: 20vw;
 width: 50vw;
 
 }
-@media screen and (min-width:1440px) {
+
+#infotarif {
+    top: 100%;
+    left: 5%;
+    
+}
+#infotarif2 {
+    top: 110%;
+   left: 10%;
+}
+#navigation li{
+font-size: 45px;
+margin-left: 65px;
+}
+#infoparc{
+    font-size: 30px;
+}
+#logo{
+width: 90px;
+height:80px;
+
+}
+#dva{
+width: 45vw;
+
+}
+#titre{
+font-size: xx-large;
+
+}
+#tarifs{
+height: 24vw;
+width: 39vw;
+
+}
+#logo_connexion2{
+    width: 60%;
+}
+#pseudoinput{
+    font-size: 2vw;
+}
+#comminput{
+    font-size: 2vw;
+
+}
+#commentairefirebase{
+    width: 52vw;
+}
+.comms{
+    font-size: x-large;
+    margin: 5vw;
+    line-height: 3vw;
+}
+#youtube, #twitter ,#facebook {
+width: 5vw;
+
+
+}
+footer{font-size: 2vw;}
+#social{
+    column-gap: 3vw;
+}
+
+#tarifs p {
+    font-size: 1.5vw;
+    margin-bottom: 2vw;
+}
+p#tariftitre{
+font-size: 3vw;
+
+}
+#zenya{
+width: 100%;
+
+}
+button{
+
+    width: 20vw;
+    height: 3vw;
+}
+#poster{
+ font-size: x-large;  
+ width: 15vw;
+ height: 2vw; 
+}
+button a {
+    font-size: x-large;
+}
+
+@media only screen and (min-width:1440px) {
   video{
 height: 20vh;
 width: 40vw;
 
   }  
 }
-@media screen and (min-width:1660px) {
+@media only screen and (min-width:1660px) {
     video{
   height: 30vw;
   width: 50vw;

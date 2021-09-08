@@ -77,7 +77,8 @@ function ajoutcommentaire(pseudo, commentaire) {
     })
   }).then((res) => res.json())
     .then((json)=> {
-    console.log(json)
+      console.log(json)
+      
     affichercomm()
   })
   
@@ -113,12 +114,15 @@ document.querySelector("#poster").addEventListener("click", function () {
     document.querySelector("#error").prepend(p);
   } else if (input1.value != "" && input2.value != "") {
     console.log("ok");
-    Number(input1.value)
+   
     
     ajoutcommentaire(input1.value, input2.value)
-     window.location.href = 'index.html#espacecomm';
-    window.location.reload(true); 
-    refreshcomm()
+    setTimeout(() => {
+      refreshcomm();
+    }, 2000);
+    
+    
+    
   
    
 
@@ -129,8 +133,10 @@ document.querySelector("#poster").addEventListener("click", function () {
 
 function refreshcomm() {
   document.querySelector("#espacecomm").remove(".comms")
+   window.location.href = 'index.html#espacecomm'; 
+   window.location.reload(true);  
   affichercomm()
-  return
+  
 }
 
 //Refresh alerte ajout comm

@@ -17,13 +17,13 @@
 html {
     background-color: black;
     scroll-behavior: smooth;
-    
+
     margin: 0;
     padding: 0%;
-    
-    
-   
-    
+
+
+
+
 }
 
 button {
@@ -85,9 +85,9 @@ a {
 #logo {
     height: 55px;
     position: absolute;
-margin-top: 10px;
-transform: translate(34px, 0);
-   
+    margin-top: 10px;
+    transform: translate(34px, 0);
+
 }
 
 .alertecomm {
@@ -110,7 +110,7 @@ h1 {
     font-family: "overwatchfont";
     text-shadow: 1px 1px 2px rgb(29 29 29), 0 0 1em rgb(0 0 0), 0 0 0.2em rgb(0 0 0);
     margin: auto;
-    margin-top:34px;
+    margin-top: 34px;
     margin-bottom: 34px;
 
 }
@@ -133,7 +133,7 @@ h1 {
     background-position: center;
     background-attachment: initial;
     font-family: "overwatchfont";
-    height: 600px;
+    height: 80vh;
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
         0px 0px 10px #000000;
     position: relative;
@@ -160,7 +160,7 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    
+
     justify-self: center;
     align-self: center;
 }
@@ -253,7 +253,7 @@ body {
     box-sizing: border-box;
     position: relative;
     text-align: center;
-    
+
 }
 
 div>button {
@@ -280,8 +280,8 @@ span {
     position: relative;
     max-width: max-content;
     margin: 0%;
-  
-    
+
+
 }
 
 #bouttonbody {
@@ -359,624 +359,781 @@ footer {
 }
 
 /* todo ---------------------------------------Responsive mediaquery 1920 ---------------------------------------*/
-@media (min-width: 1920px) {
-    html{
+@media only screen and (min-width: 1920px) {
+    html {
 
         box-sizing: border-box;
         position: relative;
-        overflow-y:scroll;
+        overflow-y: scroll;
         overflow-x: hidden;
         box-sizing: content-box;
-     }
-     header{
-         padding-bottom: 3px;
-         display: flex;
-         justify-items: center;
-         background-color: black;
-         
-         width: 100%;
-     }
-     header a {
-    
-    
-        font-size: 35px;
-     }
-     ul{
-    
-    font-size: 13px;
-    
-     }
-        header li{
-    
-    padding: 0%;
-    margin: 0px;
-    margin-left: 65px;
-    text-align: center;
-    
-      }
-      #img1,#img2,#img3{
-    width: 25vw;
-    
-    
-      }
-      div #bodypainting, div #spectales, div #lasergame{
-    text-align: center;
-    margin: 9px;
-    
-    
-    
-    
-      }
-      div #bodypainting p,div #spectales p,div #lasergame p{
-font-size: 32px;
+    }
 
-
-      }
-      #ajoutbody, #bouttonscpectacle,#bouttonlaser{
-    font-size: 30px;
-    
-    
-    
-      }
-      #navigation{
-          margin: 0%;
+    header {
+        padding-bottom: 3px;
         display: flex;
-        flex-direction: row; 
+        justify-items: center;
+        background-color: black;
+
+        width: 100%;
+    }
+
+    header a {
+
+
+        font-size: 45px;
+    }
+
+    ul {
+
+        font-size: 50px;
+
+    }
+
+    header li {
+
+        padding: 0%;
+        margin-top: 8px;
+        padding-left: 20px;
+        text-align: center;
+
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+        width: 22vw;
+
+
+    }
+
+    div #bodypainting,
+    div #spectales,
+    div #lasergame {
+        text-align: center;
+        margin: 2vw;
+
+
+
+
+    }
+
+    div #bodypainting p,
+    div #spectales p,
+    div #lasergame p {
+        font-size: 32px;
+
+
+    }
+
+    #ajoutbody,
+    #bouttonscpectacle,
+    #bouttonlaser {
+        font-size: 30px;
+
+
+
+    }
+
+    #navigation {
+        margin: 0%;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
-       
+
         margin: auto;
     }
-                #logo{
-    
-                    transform: translate(12px, 0px);
-                    height: 80px;
-                    margin-top: 2px;
-                }
-                #reservationajout p{
-    
-    
-                    font-size: 9px;
-                }
-                h1{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-size: 50px;
-                }
-                #activitees{
-    width: 70vw;
-    height: 85vh;
-    background-position: center;
-    background-size: cover;
-    
-                }
-                #descriptionactivitees p{
-    font-size: 40px;
-    margin-top: 9px;
-    
-    
-                }
-                .commmaria{
-                    font-size: 20px;
-                    margin-top: 0;
-                }
-                #jaime P{
-                    margin-top: 60px;
-                    font-size: 40px;
-                }
-                #reservationajout{
-                    width: 84vw;
-                    height: 55vh;
-    
-                }
-                #apercu{
-    width: 60vw;
-    height: 40vh;
-    background-position: center;
-    font-size: 25px;
-    
-                }
-                input{font-size: 20px;}
-                footer{
-    font-size: 32px;
-    
-    
-                }
-                #jaimeboutton{
-font-size: 40px;
 
-                }  
+    #logo {
+
+        transform: translate(34px, 0px);
+        height: 80px;
+        margin-top: 10px;
+    }
+
+    #reservationajout p {
+
+
+        font-size: 9px;
+    }
+
+    h1 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-size: 40px;
+    }
+
+    #activitees {
+        width: 65vw;
+        height: 75vh;
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    #descriptionactivitees p {
+        font-size: 30px;
+        margin-top: 1vw;
+
+
+    }
+
+    .commmaria {
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    #jaime P {
+        margin-top: 60px;
+        font-size: 40px;
+    }
+
+    #reservationajout {
+        width: 84vw;
+        height: 60vh;
+
+    }
+
+    #apercu {
+        width: 55vw;
+        height: 28vw;
+        background-position: center;
+        font-size: 30px;
+
+    }
+
+    input {
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 2vw;
+
+
+    }
+    #youtube, #twitter ,#facebook {
+        width: 5vw;
+        
+        
+        }
+
+    #jaimeboutton {
+        font-size: 40px;
+
+    }
+
+    #navigation li {
+        font-size: 45px;
+        margin-left: 65px;
+    }
+    #valider, #nouvellereservation,#telechargement{
+        height: 2vw;
+        width: 15vw;
+        font-size: 15px;
+    }
 }
-@media (min-width: 1440px) and (max-width: 1919px) {
-    html{
+
+
+/* todo ---------------------------------------Responsive 1440 ---------------------------------------*/
+@media only screen and (min-width: 1440px) and (max-width: 1559px) {
+    html {
 
         box-sizing: border-box;
         position: relative;
-        overflow-y:scroll;
+        overflow-y: scroll;
         overflow-x: hidden;
         box-sizing: content-box;
-     }
-     header{
-         padding-bottom: 3px;
-         display: flex;
-         justify-items: center;
-         background-color: black;
-         
-         width: 100%;
-     }
-     header a {
-    
-    
-        font-size: 35px;
-     }
-     ul{
-    
-    font-size: 13px;
-    
-     }
-        header li{
-    
-    padding: 0%;
-    margin: 0px;
-    margin-left: 55px;
-    text-align: center;
-    
-      }
-      #img1,#img2,#img3{
-    width: 25vw;
-    
-    
-      }
-      div #bodypainting, div #spectales, div #lasergame{
-    text-align: center;
-    margin: 9px;
-    
-    
-    
-    
-      }
-      div #bodypainting p,div #spectales p,div #lasergame p{
-font-size: 32px;
+    }
 
-
-      }
-      #ajoutbody, #bouttonscpectacle,#bouttonlaser{
-    font-size: 30px;
-    
-    
-    
-      }
-      #navigation{
-          margin: 0%;
+    header {
+        padding-bottom: 3px;
         display: flex;
-        flex-direction: row; 
+        justify-items: center;
+        background-color: black;
+
+        width: 100%;
+    }
+
+    header a {
+
+
+        font-size: 35px;
+    }
+
+    ul {
+
+        font-size: 13px;
+
+    }
+
+    header li {
+
+        padding: 0%;
+        margin: 0px;
+        margin-left: 55px;
+        text-align: center;
+
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+        width: 25vw;
+
+
+    }
+
+    div #bodypainting,
+    div #spectales,
+    div #lasergame {
+        text-align: center;
+        margin: 9px;
+
+
+
+
+    }
+
+    div #bodypainting p,
+    div #spectales p,
+    div #lasergame p {
+        font-size: 32px;
+
+
+    }
+
+    #ajoutbody,
+    #bouttonscpectacle,
+    #bouttonlaser {
+        font-size: 30px;
+
+
+
+    }
+
+    #navigation {
+        margin: 0%;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
-       
+
         margin: auto;
     }
-                #logo{
-    
-                    transform: translate(12px, 0px);
-                    height: 70px;
-                    margin-top: 5px;
-                }
-                #reservationajout p{
-    
-    
-                    font-size: 9px;
-                }
-                h1{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-size: 50px;
-                }
-                #activitees{
-    width: 70vw;
-    height: 65vh;
-    background-position: center;
-    background-size: cover;
-    
-                }
-                #descriptionactivitees p{
-    font-size: 30px;
-    margin-top: 9px;
-    
-    
-                }
-                .commmaria{
-                    font-size: 30px;
-                    margin-top: 0;
-                }
-                #jaime P{
-                    margin-top: 40px;
-                    font-size: 40px;
-                }
-                #reservationajout{
-                    width: 84vw;
-                    height: 55vh;
-    
-                }
-                #apercu{
-    width: 60vw;
-    height: 40vh;
-    background-position: center;
-    font-size: 25px;
-    
-                }
-                input{font-size: 20px;}
-                footer{
-    font-size: 32px;
-    
-    
-                }
-                #jaimeboutton{
-font-size: 40px;
 
-                }
-      
+    #logo {
+
+        transform: translate(12px, 0px);
+        height: 70px;
+        margin-top: 5px;
+    }
+
+    #reservationajout p {
+
+
+        font-size: 9px;
+    }
+
+    h1 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+
+    #activitees {
+        width: 70vw;
+        
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    #descriptionactivitees p {
+        font-size: 30px;
+        margin-top: 9px;
+
+
+    }
+
+    .commmaria {
+ margin-top: 0;
+    }
+
+    #jaime P {
+        margin-top: 40px;
+        font-size: 40px;
+    }
+
+    #reservationajout {
+        width: 84vw;
+       
+    }
+
+    #apercu {
+        width: 60vw;
+        height: 30vw;
+        background-position: center;
+        font-size: 25px;
+
+    }
+
+    input {
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 32px;
+
+
+    }
+
+    #jaimeboutton {
+        font-size: 20px;
+
+    }
+
 }
-/* todo ---------------------------------------Responsive Ipa ---------------------------------------*/
+
+/* todo ---------------------------------------Responsive IpaD PRO ---------------------------------------*/
 
 @media (min-width: 1024px) and (max-width: 1439px) {
-    html{
+    html {
 
         box-sizing: border-box;
         position: relative;
-        overflow-y:scroll;
+        overflow-y: scroll;
         overflow-x: hidden;
         box-sizing: content-box;
-     }
-     header{
-         padding-bottom: 3px;
-         display: flex;
-         justify-items: center;
-         background-color: black;
-         
-         width: 100%;
-     }
-     header a {
-    
-    
-        font-size: 25px;
-     }
-     ul{
-    
-    font-size: 13px;
-    
-     }
-        header li{
-    
-    padding: 0%;
-    margin: 0px;
-    margin-left: 35px;
-    text-align: center;
-    
-      }
-      #img1,#img2,#img3{
-    width: 26vw;
-    
-    
-      }
-      div #bodypainting, div #spectales, div #lasergame{
-    text-align: center;
-    margin: 9px;
-    
-    
-    
-    
-      }
-      #ajoutbody, #bouttonscpectacle,#bouttonlaser{
-    font-size: 22px;
-    
-    
-    
-      }
-      #navigation{
-          margin: 0%;
+    }
+
+    header {
+        padding-bottom: 3px;
         display: flex;
-        flex-direction: row; 
+        justify-items: center;
+        background-color: black;
+
+        width: 100%;
+    }
+
+    header a {
+
+
+        font-size: 25px;
+    }
+
+    ul {
+
+        font-size: 13px;
+
+    }
+
+    header li {
+
+        padding: 0%;
+        margin: 0px;
+        margin-left: 35px;
+        text-align: center;
+
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+        width: 26vw;
+
+
+    }
+
+    div #bodypainting,
+    div #spectales,
+    div #lasergame {
+        text-align: center;
+        margin: 9px;
+
+
+
+
+    }
+
+    #ajoutbody,
+    #bouttonscpectacle,
+    #bouttonlaser {
+        font-size: 22px;
+
+
+
+    }
+
+    #navigation {
+        margin: 0%;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
-       
+
         margin: auto;
     }
-                #logo{
-    
-                    transform: translate(12px, 0px);
-                    height: 50px;
-                    margin-top: 5px;
-                }
-                #reservationajout p{
-    
-    
-                    font-size: 9px;
-                }
-                h1{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 35px;
-                }
-                #activitees{
-    width: 90vw;
-    height: 45vh;
-    background-position: center;
-    background-size: cover;
-    
-                }
-                #descriptionactivitees p{
-    font-size: 25px;
-    margin-top: 9px;
-    
-    
-                }
-                .commmaria{
-                    font-size: 16px;
-                    margin-top: 0;
-                }
-                #jaime P{
-                    margin-top: 40px;
-                    font-size: 30px;
-                }
-                #reservationajout{
-                    width: 94vw;
-                    height: 29vh;
-    
-                }
-                #apercu{
-    width: 80vw;
-    height: 30vh;
-    background-position: center;
-    font-size: 23px;
-    
-                }
-                input{font-size: 20px;}
-                footer{
-    font-size: 12px;
-    
-    
-                }
-                #jaimeboutton{
-font-size: 30px;
 
-                }
-   
+    #logo {
+
+        transform: translate(12px, 0px);
+        height: 50px;
+        margin-top: 5px;
+    }
+
+    #reservationajout p {
+
+
+        font-size: 9px;
+    }
+
+    h1 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 35px;
+    }
+
+    #activitees {
+        width: 90vw;
+        height: 45vh;
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    #descriptionactivitees p {
+        font-size: 25px;
+        margin-top: 9px;
+
+
+    }
+
+    .commmaria {
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    #jaime P {
+        margin-top: 40px;
+        font-size: 30px;
+    }
+
+    #reservationajout {
+        width: 94vw;
+        height: 29vh;
+
+    }
+
+    #apercu {
+        width: 80vw;
+        height: 30vh;
+        background-position: center;
+        font-size: 23px;
+
+    }
+
+    input {
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 12px;
+
+
+    }
+
+    #jaimeboutton {
+        font-size: 30px;
+
+    }
+
 }
+
 /* todo ---------------------------------------Responsive iPAD ---------------------------------------*/
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
-    html{
+    html {
 
         box-sizing: border-box;
         position: relative;
-        overflow-y:scroll;
+        overflow-y: scroll;
         overflow-x: hidden;
         box-sizing: content-box;
-     }
-     header{
-         padding-bottom: 3px;
-         display: flex;
-         justify-items: center;
-         background-color: black;
-         
-         width: 100%;
-     }
-     header a {
-    
-    
-        font-size: 20px;
-     }
-     ul{
-    
-    font-size: 13px;
-    
-     }
-        header li{
-    
-    padding: 0%;
-    margin: 0px;
-    margin-left: 20px;
-    text-align: center;
-    
-      }
-      #img1,#img2,#img3{
-    width: 26vw;
-    
-    
-      }
-      div #bodypainting, div #spectales, div #lasergame{
-    text-align: center;
-    margin: 9px;
-    
-    
-    
-    
-      }
-      #ajoutbody, #bouttonscpectacle,#bouttonlaser{
-    font-size: 16px;
-    
-    
-    
-      }
-      #navigation{
-          margin: 0%;
+    }
+
+    header {
+        padding-bottom: 3px;
         display: flex;
-        flex-direction: row; 
+        justify-items: center;
+        background-color: black;
+
+        width: 100%;
+    }
+
+    header a {
+
+
+        font-size: 20px;
+    }
+
+    ul {
+
+        font-size: 13px;
+
+    }
+
+    header li {
+
+        padding: 0%;
+        margin: 0px;
+        margin-left: 20px;
+        text-align: center;
+
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+        width: 26vw;
+
+
+    }
+
+    div #bodypainting,
+    div #spectales,
+    div #lasergame {
+        text-align: center;
+        margin: 9px;
+
+
+
+
+    }
+
+    #ajoutbody,
+    #bouttonscpectacle,
+    #bouttonlaser {
+        font-size: 16px;
+
+
+
+    }
+
+    #navigation {
+        margin: 0%;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
-       
+
         margin: auto;
     }
-                #logo{
-    
-                    transform: translate(12px, 0px);
-                    height: 38px;
-                    margin-top: 5px;
-                }
-                #reservationajout p{
-    
-    
-                    font-size: 9px;
-                }
-                h1{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 29px;
-                }
-                #activitees{
-    width: 90vw;
-    height: 45vh;
-    background-position: center;
-    background-size: cover;
-    
-                }
-                #descriptionactivitees p{
-    font-size: 18px;
-    margin-top: 2px;
-    
-    
-                }
-                .commmaria{
-                    font-size: 12px;
-                    margin-top: 0;
-                }
-                #jaime P{
-                    margin-top: 40px;
-                    font-size: 20px;
-                }
-                #reservationajout{
-                    width: 94vw;
-                    height: 29vh;
-    
-                }
-                #apercu{
-    width: 80vw;
-    height: 30vh;
-    background-position: center;
-    
-                }
-                footer{
-    font-size: 12px;
-    
-    
-                }
+
+    #logo {
+
+        transform: translate(12px, 0px);
+        height: 38px;
+        margin-top: 5px;
+    }
+
+    #reservationajout p {
+
+
+        font-size: 9px;
+    }
+
+    h1 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 29px;
+    }
+
+    #activitees {
+        width: 90vw;
+        height: 45vh;
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    #descriptionactivitees p {
+        font-size: 18px;
+        margin-top: 2px;
+
+
+    }
+
+    .commmaria {
+        font-size: 12px;
+        margin-top: 0;
+    }
+
+    #jaime P {
+        margin-top: 40px;
+        font-size: 20px;
+    }
+
+    #reservationajout {
+        width: 94vw;
+        height: 29vh;
+
+    }
+
+    #apercu {
+        width: 80vw;
+        height: 30vh;
+        background-position: center;
+
+    }
+
+    footer {
+        font-size: 12px;
+
+
+    }
 
 }
+
 /* todo ---------------------------------------Responsive iPHONE 7 etc ---------------------------------------*/
 
 @media (min-width: 414px) and (max-width: 767px) {
 
-    html{
+    html {
 
         box-sizing: border-box;
         position: relative;
-        overflow-y:scroll;
+        overflow-y: scroll;
         overflow-x: hidden;
         box-sizing: content-box;
-     }
-     header{
-         padding-bottom: 3px;
-         display: flex;
-         justify-items: center;
-         background-color: black;
-         
-         width: 100%;
-     }
-     header a {
-    
-    
-        font-size: 8px;
-     }
-     ul{
-    
-    font-size: 13px;
-    
-     }
-        header li{
-    
-    padding: 0%;
-    margin: 0px;
-    margin-left: 20px;
-    text-align: center;
-    
-      }
-      #img1,#img2,#img3{
-    width: 26vw;
-    
-    
-      }
-      div #bodypainting, div #spectales, div #lasergame{
-    text-align: center;
-    margin: 9px;
-    
-    
-    
-      }
-      #ajoutbody, #bouttonscpectacle,#bouttonlaser{
-    font-size: 10px;
-    
-    
-    
-      }
-      #navigation{
-          margin: 0%;
+    }
+
+    header {
+        padding-bottom: 3px;
         display: flex;
-        flex-direction: row; 
+        justify-items: center;
+        background-color: black;
+
+        width: 100%;
+    }
+
+    header a {
+
+
+        font-size: 8px;
+    }
+
+    ul {
+
+        font-size: 13px;
+
+    }
+
+    header li {
+
+        padding: 0%;
+        margin: 0px;
+        margin-left: 20px;
+        text-align: center;
+
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+        width: 26vw;
+
+
+    }
+
+    div #bodypainting,
+    div #spectales,
+    div #lasergame {
+        text-align: center;
+        margin: 9px;
+
+
+
+    }
+
+    #ajoutbody,
+    #bouttonscpectacle,
+    #bouttonlaser {
+        font-size: 10px;
+
+
+
+    }
+
+    #navigation {
+        margin: 0%;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
-       
+
         margin: auto;
     }
-                #logo{
-    
-                    transform: translate(12px, 0px);
-                    height: 30px;
-                    margin-top: 5px;
-                }
-                #reservationajout p{
-    
-    
-                    font-size: 9px;
-                }
-                h1{
-    margin-top: 14px;
-    margin-bottom: 14px;
-    
-                    font-size: 20px;
-                }
-                #activitees{
-    width: 90vw;
-    height: 40vh;
-    background-position: center;
-    background-size: cover;
-    
-                }
-                #descriptionactivitees p{
-    font-size: 10px;
-    margin-top: 2px;
-    
-    
-                }
-                .commmaria{
-                    font-size: 6px;
-                    margin-top: 0;
-                }
-                #jaime P{
-                    margin-top: 20px;
-                    font-size: 15px;
-                }
-                #reservationajout{
-                    width: 94vw;
-                    height: 29vh;
-    
-                }
-                #apercu{
-    width: 90vw;
-    height: 45vh;
-    background-position: center;
-    
-                }
-                footer{
-    font-size: 12px;
-    
-    
-                }  
+
+    #logo {
+
+        transform: translate(12px, 0px);
+        height: 30px;
+        margin-top: 5px;
+    }
+
+    #reservationajout p {
+
+
+        font-size: 9px;
+    }
+
+    h1 {
+        margin-top: 14px;
+        margin-bottom: 14px;
+
+        font-size: 20px;
+    }
+
+    #activitees {
+        width: 90vw;
+        height: 40vh;
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    #descriptionactivitees p {
+        font-size: 10px;
+        margin-top: 2px;
+
+
+    }
+
+    .commmaria {
+        font-size: 6px;
+        margin-top: 0;
+    }
+
+    #jaime P {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    #reservationajout {
+        width: 94vw;
+        height: 29vh;
+
+    }
+
+    #apercu {
+        width: 90vw;
+        height: 45vh;
+        background-position: center;
+
+    }
+
+    footer {
+        font-size: 12px;
+
+
+    }
 
 }
 
@@ -984,119 +1141,143 @@ font-size: 30px;
 /* todo ---------------------------------------Responsive iPHONE 6 ---------------------------------------*/
 
 @media (min-width: 375px) and (max-width: 413px) {
- 
- html{
 
-    box-sizing: border-box;
-    position: relative;
-    overflow-y:scroll;
-    overflow-x: hidden;
-    box-sizing: content-box;
- }
- header{
-     padding-bottom: 3px;
-     display: flex;
-     justify-items: center;
-     background-color: black;
-     
-     width: 100%;
- }
- header a {
+    html {
 
+        box-sizing: border-box;
+        position: relative;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        box-sizing: content-box;
+    }
 
-    font-size: 8px;
- }
- ul{
+    header {
+        padding-bottom: 3px;
+        display: flex;
+        justify-items: center;
+        background-color: black;
 
-font-size: 13px;
+        width: 100%;
+    }
 
- }
-    header li{
-
-padding: 0%;
-margin: 0px;
-margin-left: 20px;
-text-align: center;
-
-  }
-  #img1,#img2,#img3{
-width: 26vw;
+    header a {
 
 
-  }
-  div #bodypainting, div #spectales, div #lasergame{
-text-align: center;
-margin: 9px;
+        font-size: 8px;
+    }
+
+    ul {
+
+        font-size: 13px;
+
+    }
+
+    header li {
+
+        padding: 0%;
+        margin: 0px;
+        margin-left: 20px;
+        text-align: center;
+
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+        width: 26vw;
+
+
+    }
+
+    div #bodypainting,
+    div #spectales,
+    div #lasergame {
+        text-align: center;
+        margin: 9px;
 
 
 
-  }
-  #ajoutbody, #bouttonscpectacle,#bouttonlaser{
-font-size: 10px;
+    }
+
+    #ajoutbody,
+    #bouttonscpectacle,
+    #bouttonlaser {
+        font-size: 10px;
 
 
 
-  }
-  #navigation{
-      margin: 0%;
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-   
-    margin: auto;
-}
-            #logo{
+    }
 
-                transform: translate(12px, 0px);
-                height: 30px;
-                margin-top: 5px;
-            }
-            #reservationajout p{
+    #navigation {
+        margin: 0%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
 
+        margin: auto;
+    }
 
-                font-size: 9px;
-            }
-            h1{
-margin-top: 14px;
-margin-bottom: 14px;
+    #logo {
 
-                font-size: 20px;
-            }
-            #activitees{
-width: 90vw;
-height: 40vh;
-background-position: center;
-background-size: cover;
+        transform: translate(12px, 0px);
+        height: 30px;
+        margin-top: 5px;
+    }
 
-            }
-            #descriptionactivitees p{
-font-size: 10px;
-margin-top: 2px;
+    #reservationajout p {
 
 
-            }
-            .commmaria{
-                font-size: 6px;
-                margin-top: 0;
-            }
-            #jaime P{
-                margin-top: 20px;
-                font-size: 15px;
-            }
-            #reservationajout{
-                width: 94vw;
-                height: 29vh;
+        font-size: 9px;
+    }
 
-            }
-            #apercu{
-width: 90vw;
-height: 50vh;
-background-position: center;
+    h1 {
+        margin-top: 14px;
+        margin-bottom: 14px;
 
-            }
-            footer{
-font-size: 12px;
+        font-size: 20px;
+    }
+
+    #activitees {
+        width: 90vw;
+        height: 40vh;
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    #descriptionactivitees p {
+        font-size: 10px;
+        margin-top: 2px;
 
 
-            }
+    }
+
+    .commmaria {
+        font-size: 6px;
+        margin-top: 0;
+    }
+
+    #jaime P {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    #reservationajout {
+        width: 94vw;
+        height: 29vh;
+
+    }
+
+    #apercu {
+        width: 90vw;
+        height: 50vh;
+        background-position: center;
+
+    }
+
+    footer {
+        font-size: 12px;
+
+
+    }
 }
