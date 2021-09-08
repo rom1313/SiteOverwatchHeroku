@@ -40,17 +40,17 @@ const jaime = async () => {
   const data = await fetch('http://localhost:13000/mariaDBjaime');
   const datajson = await data.json();
   valeurjaime.className = "jaime"
-  console.log(data)
-  console.log(datajson)
+  
+ 
   valeurjaime.textContent = datajson[0].valeur + " J'aime "
   document.querySelector("#jaime").appendChild(valeurjaime)
 
 }
 jaime()
 async function incrementjaime() {
-  const data = await fetch('http://localhost:13000/mariaDBjaime');
-  const data2 = await data.json();
-  let jaimesupp = data2[0].valeur
+  const reponse = await fetch('http://localhost:13000/mariaDBjaime');
+  const reponsejson = await reponse.json();
+  let jaimevalue = reponsejson[0].valeur
   fetch('http://localhost:13000/mariaDBjaimesupp', {
       method: 'post',
       headers: {
@@ -58,13 +58,12 @@ async function incrementjaime() {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        valeur: jaimesupp
+        valeur: jaimevalue
       })
-    }).then(res => valeurjaime.textContent = jaimesupp)
-    .then(res => console.log(res));
-
+    }).then(res => valeurjaime.textContent = jaimevalue)
+    .then(res => console.log(res+1));
   jaime()
-  return
+  
 }
 
 //todo-------------------------------------
@@ -88,9 +87,6 @@ bouttonscpectacle.addEventListener('click', () => {
 
 //TODO -------- écoute du boutton ajout laser -------------
 
-
-
-
 bouttonlaser.addEventListener('click', () => {
   if (bouttonlaser.textContent == "ajouter") {
     ajoutlaser()
@@ -107,9 +103,6 @@ function ajoutbodypainting() {
   bouttonbody.textContent = "supprimer"
   img1.style.filter = "grayscale(90%)"
   activite.textContent += " " + "Body-Painting"
-
-
-
 }
 
 function ajoutspectacle() {
@@ -117,16 +110,14 @@ function ajoutspectacle() {
   activite.textContent += " " + "Spectacle"
   img2.style.filter = "grayscale(90%)"
   console.log('Spectacle ajouté')
-
 }
 
 function ajoutlaser() {
   bouttonlaser.textContent = "supprimer"
   activite.textContent += " " + "Laser-Game"
   img3.style.filter = "grayscale(90%)"
-
-
 }
+
 //TODO -------- Telechargement de la reservation -------------
 
 function download(filename, text) {
@@ -196,9 +187,7 @@ function nombrealeatoire(max) {
 }
 
 function refreshalert() {
-
   document.querySelector(".alertecomm ").remove()
-
   return
 }
 let indicecom;

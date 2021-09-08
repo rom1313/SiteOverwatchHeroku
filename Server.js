@@ -2,21 +2,28 @@
 //TODO ----------INITIALISATION ----
 //TODO ---------------------------------------
 const express = require('express')
-const bodyParser = require('body-parser')
 const app = express()
-const jsonParser = bodyParser.json()
 const port = process.env.PORT || 13000
 const compression = require('compression')
 const optimus = require('connect-image-optimus');
-
-
-
-//TODO ----------------------------------------------
-//TODO ------- AJOUT DE SOKET.IO-----
-//TODO ----------------------------------------------
 const server = require('http').Server(app)
 const helmet = require("helmet");
-
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+//TODO -----------------------------------------------------------
+//TODO ------- Déclaration des fichiers static utilisé-----
+//TODO -----------------------------------------------------------
+var publicDir = require('path').join(__dirname, '');
+app.use(express.static(publicDir));
+app.use(express.static('static'));
+//TODO -----------------------------------------------------------
+//TODO ------- Middleware-----
+//TODO -----------------------------------------------------------
+app.use(helmet({
+  contentSecurityPolicy: (process.env.NODE_ENV === 'production') ? undefined : false
+}));
+app.use(compression())
+app.use(optimus(publicDir));
 //TODO ----------------------------------------------
 //TODO ------- LANCEMENT ECOUTE-----
 //TODO ----------------------------------------------
@@ -24,29 +31,6 @@ const helmet = require("helmet");
 server.listen(process.env.PORT || 13000, () => {
   console.log('Le server fonctionne sur le port : ' + port);
 })
-
-//TODO -----------------------------------------------------------
-//TODO ------- Déclaration des fichiers static utilisé-----
-//TODO -----------------------------------------------------------
-
-var publicDir = require('path').join(__dirname, '');
-app.use(express.static(publicDir));
-app.use(express.static('static'));
-app.use('', express.static('index.html'));
-app.use('', express.static('Style.css'));
-app.use('', express.static('Style2.css'));
-app.use('', express.static('Script.js'));
-app.use('', express.static('extension.js'));
-app.use('', express.static('Script2.js'));
-app.use(helmet({
-  contentSecurityPolicy: (process.env.NODE_ENV === 'production') ? undefined : false
-}));
-app.use(compression())
-
-var staticPath = __dirname + '/static/';
-
-app.use(optimus(publicDir));
-
 
 //TODO --------------------------------------------------------------------------------------
 //TODO ------- Autorisé l'acces crosslocal (fonction fetch le server perso) -----
@@ -74,42 +58,15 @@ var connection = mysql.createConnection({
 
   connection.connect();
 
-
-
-
 //TODO ----------------------------------------------------
-//TODO ------- GetMapping Requête et Réponses -----
+//TODO ------- Mapping Requête et Réponses -----
 //TODO ----------------------------------------------------
 
-//TODO --------- localhost:13000/test API retourne Favio --------------------------
 
-app.get('/test', (req, res) => {
-
-  res.json({
-    username: 'Flavio'
-  })
-
-})
-
-//TODO --------- insertion dans la base de données mariadb projetfilerouge (commentaires) --------------------------
-
-app.get('/mariaDB', (req, res) => {
-
-  var post = {
-    pseudo: 'kenu',
-    commentaire: "Yo maria ça marche oui oui! "
-  };
-  var query = connection.query('INSERT INTO comms SET ?', post, function (err, result) {
-    if (err) throw err;
-    console.log(result);
-    res.json(post)
-  });
-  console.log(query.sql);
-})
 
 //TODO --------- insertion dans la base de données mariadb projetfilerouge reservation --------------------------
 
-app.post('/mariaDBreservation', jsonParser, (req, res) => {
+app.post('/mariaDBreservation', (req, res) => {
   var post = {
     nom: req.body.nom,
     date: req.body.date,
@@ -131,7 +88,7 @@ app.get('/mariaDBcomms', (req, res, ) => {
     res.json(rows)
   });
 })
-//TODO --------- Recuperation des jaime maria db  --------------------------
+//TODO --------- Recuperation des likes maria db  --------------------------
 
 app.get('/mariaDBjaime', (req, res, ) => {
 
@@ -140,30 +97,16 @@ app.get('/mariaDBjaime', (req, res, ) => {
   });
 })
 
-//TODO --------- Recuperation des utilisateur maria db  --------------------------
+//TODO --------- Update likes MariaDB  --------------------------
 
-app.get('/mariaDButilisateur', (req, res) => {
-
-  connection.query('SELECT * FROM utilisateur', function (err, rows, fields) {
-    res.json(rows)
-  });
-})
-
-app.post('/mariaDBjaimesupp', jsonParser, (req, res) => {
-  var post = {
-    nom: req.body.nom,
-    date: req.body.date,
-    activitees: req.body.activitees,
-    code: req.body.code
-  };
-  var query = connection.query(`UPDATE jaime SET valeur = ${req.body.valeur+1} WHERE nom = "likes activitees"`, function (err, result) {
-
-    console.log(result);
-    res.json(post)
+app.post('/mariaDBjaimesupp', (req, res) => {
+  let jaime =  `${req.body.valeur+1}`
+  var query = connection.query(`UPDATE jaime SET valeur = ${jaime} WHERE nom = "likes activitees"`, function (err, result) {
+  res.json(jaime)
   });
   console.log(query.sql);
 })
-
+//TODO --------- MODULE ANTI-CRASH  --------------------------
 process.on('uncaughtException', function (err) {
   console.error(err);
   console.log("Node NOT Exiting...");
