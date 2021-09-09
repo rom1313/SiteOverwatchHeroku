@@ -21,7 +21,7 @@ let bouttonvalider = document.querySelector('#valider')
 //TODO -------- Fonction nomreservation -------------
 function input() {
   let nom = inputnom.value
-  console.log(nom);
+  
   nomreservationapercu.textContent = nom
 
 }
@@ -109,7 +109,7 @@ function ajoutspectacle() {
   bouttonscpectacle.textContent = "supprimer"
   activite.textContent += " " + "Spectacle"
   img2.style.filter = "grayscale(90%)"
-  console.log('Spectacle ajouté')
+  
 }
 
 function ajoutlaser() {
@@ -281,7 +281,7 @@ function postreservation() {
           code: rescode
         })
       }).then(res => res.json())
-      .then((res) => {bouttonvalider.remove();})
+      .then((res) => {bouttonvalider.remove();console.log(res)})
 
 
 

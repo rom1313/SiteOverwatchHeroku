@@ -64,7 +64,7 @@ var connection = mysql.createConnection({
 
 
 
-//TODO --------- insertion dans la base de données mariadb projetfilerouge reservation --------------------------
+//TODO --------- Base de données mariadb projetfilerouge reservation --------------------------
 
 app.post('/mariaDBreservation', (req, res) => {
   var post = {
@@ -75,9 +75,9 @@ app.post('/mariaDBreservation', (req, res) => {
   };
   var query = connection.query('INSERT INTO reservation SET?', post, function (err, result) {
     if (err) throw err;
-    console.log(result);
-    res.json(post)
+    
   });
+  res.json(post)
   console.log(query.sql);
 })
 
