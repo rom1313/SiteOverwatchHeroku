@@ -120,16 +120,6 @@ function ajoutlaser() {
 
 //TODO -------- Telechargement de la reservation -------------
 
-function download(filename, text) {
-  var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-  element.setAttribute('download', filename);
-  element.style.display = 'none';
-  document.body.appendChild(element);
-  element.click();
-  document.body.removeChild(element);
-}
-
 bouttontele.addEventListener("click", function tele() {
   if (inputnom.value == "") {
     let p = document.createElement("p")
@@ -149,9 +139,29 @@ bouttontele.addEventListener("click", function tele() {
     document.querySelector("#error").prepend(p);
 
   } else {
-    var text = `Nom de la réservation : ${nomreservationapercu.textContent}\nDate de réservation : ${inputdate.value}\nActivitées choisis : ${activite.textContent}\nCode : ${codefinal}  `;
+   
+    var pdf = {
+      content: [
+        { text: 'Votre réservation Overwatch', fontSize: 45,alignment: 'center'},
+        { text: `\n\nNom de réservation : ${nomreservationapercu.textContent}`, fontSize: 25, alignment: 'center' },
+        { text: `\nDate de réservation : ${inputdate.value}`, fontSize: 25, alignment: 'center' },
+        { text: `\nLes activitées choisis : ${activite.textContent}`, fontSize: 25, alignment: 'center' },
+        { text: `\nVotre code : ${codefinal}`, fontSize: 25, alignment: 'center' },
+        { text: `\n\nOverwatchWorld vous remercie de votre confiance.`, fontSize: 35, alignment: 'center' },
+        
+       
+      ]
+    };
+    pdfMake.createPdf(pdf).download(`Réservation de : ${nomreservationapercu.textContent}.pdf`)
+
+
+
+
+
+    
+    /* var text = `Nom de la réservation : ${nomreservationapercu.textContent}\nDate de réservation : ${inputdate.value}\nActivitées choisis : ${activite.textContent}\nCode : ${codefinal}  `;
     var filename = "Réservation.txt";
-    download(filename, text);
+    download(filename, text); */
   }
 })
 
