@@ -32,16 +32,16 @@ dateapercu.textContent = date
 
 }
 //TODO -------- AJOUT JAIME -------------
+
 bouttonjaime.addEventListener('click', () => {
   incrementjaime()
 
 })
+
 const jaime = async () => {
   const data = await fetch('http://localhost:13000/mariaDBjaime');
   const datajson = await data.json();
   valeurjaime.className = "jaime"
-  
- 
   valeurjaime.textContent = datajson[0].valeur + " J'aime "
   document.querySelector("#jaime").appendChild(valeurjaime)
 

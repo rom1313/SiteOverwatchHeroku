@@ -489,7 +489,7 @@ footer {
     }
 
     #reservationajout {
-        width: 84vw;
+        width: 1500px;
         height: 60vh;
 
     }
@@ -533,7 +533,35 @@ footer {
     }
 }
 
+@media only screen and (min-width: 1560px) AND (max-width:1919px) {
 
+
+    #activitees {
+        width: 1000px;
+        height: 600px;
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+        width: 240px;
+margin: 18px;
+
+    }
+    div #bodypainting,
+    div #spectales,
+    div #lasergame {
+        text-align: center;
+        margin: 9px;
+
+
+
+
+    }
+}
 /* todo ---------------------------------------Responsive 1440 ---------------------------------------*/
 @media only screen and (min-width: 1444px) and (max-width: 1559px) {
     html {
@@ -640,7 +668,8 @@ footer {
     }
 
     #activitees {
-        width: 70vw;
+        width: 1100px;
+        height: 600px;
         
         background-position: center;
         background-size: cover;
@@ -717,7 +746,7 @@ footer {
     header a {
 
 
-        font-size: 25px;
+        font-size: 30px;
     }
 
     ul {
@@ -738,7 +767,7 @@ footer {
     #img1,
     #img2,
     #img3 {
-        width: 26vw;
+        width: 260px;
 
 
     }
@@ -782,7 +811,7 @@ footer {
     #reservationajout p {
 
 
-        font-size: 9px;
+        font-size: 20px;
     }
 
     h1 {
@@ -792,8 +821,8 @@ footer {
     }
 
     #activitees {
-        width: 90vw;
-        height: 45vh;
+        width: 780px;
+        height: 500px;
         background-position: center;
         background-size: cover;
 
@@ -807,7 +836,7 @@ footer {
     }
 
     .commmaria {
-        font-size: 16px;
+        font-size: 11px;
         margin-top: 0;
     }
 
@@ -817,16 +846,17 @@ footer {
     }
 
     #reservationajout {
-        width: 94vw;
-        height: 29vh;
+        width: 74vw;
+        height: 450px;
 
     }
 
     #apercu {
-        width: 80vw;
-        height: 30vh;
+        
+        
         background-position: center;
         font-size: 23px;
+        width: 700px;
 
     }
 
@@ -947,7 +977,7 @@ footer {
     }
 
     #activitees {
-        width: 90vw;
+        width: 80vw;
         height: 45vh;
         background-position: center;
         background-size: cover;
@@ -972,8 +1002,8 @@ footer {
     }
 
     #reservationajout {
-        width: 94vw;
-        height: 29vh;
+        width: 800px;
+        height: 400px;
 
     }
 

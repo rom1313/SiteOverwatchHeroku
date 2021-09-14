@@ -5,22 +5,25 @@
 }
 
 /*  HTML BODY FOOTER  */
-input,textarea{
-outline: none;
+input,
+textarea {
+    outline: none;
 
 }
-button{
+
+button {
 
     cursor: pointer;
 }
+
 html {
     background-color: black;
     scroll-behavior: smooth;
-    
+    padding: 4px;
     box-sizing: border-box;
-   
-    
-   
+    margin: 0;
+
+
 }
 
 #intro {
@@ -33,24 +36,24 @@ html {
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
         0px 0px 10px #000000;
-    
+
     background-image: url(img/comm.jpg);
-    
-    
+
+
     background-position: center;
 }
 
 .dva {
     grid-column: 1fr;
     grid-row: 2fr;
-margin-left: 5vw;
+    margin-left: 5vw;
     width: 40vw;
 }
 
 body {
 
 
-margin: 0%;
+    margin: 0%;
     background-image: url('img/fond.jpg');
     background-attachment: fixed;
     background-position: center;
@@ -87,13 +90,13 @@ ul {
     margin: auto;
     justify-content: center;
     list-style: none;
-    margin-top: 8px;
-    padding: 3px;
+    margin-top: 0px;
+    
     font-family: "overwatchfont";
     text-decoration: none;
-    font-size: 30px;
+    
     background-color: black;
-    border: solid 5px black;
+    
     align-self: center;
 }
 
@@ -119,17 +122,17 @@ a {
 
 
 #logo {
-    height: 55px;
+    transform: translate(12px, 0px);
+    height: 38px;
+    margin-top: 0px;
     position: absolute;
-margin-top: 10px;
-    transform: translate(34px, 0);
 }
 
 #video {
 
 
 
-width: content;
+    width: content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,13 +143,13 @@ video {
     margin-top: 4vh;
     width: fit-content;
     height: 400px;
-margin-right: 2vw;
-margin-bottom: 1vh;
-background-color: #000000;
-border: solid 1px rgb(0, 174, 218);
-box-shadow: 0px 0px 10px rgb(0, 0, 0),
-    0px 0px 10px #000000;
-border-radius: 12px;
+    margin-right: 2vw;
+    margin-bottom: 1vh;
+    background-color: #000000;
+    border: solid 1px rgb(0, 174, 218);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0),
+        0px 0px 10px #000000;
+    border-radius: 12px;
 }
 
 #dva {
@@ -211,36 +214,40 @@ h2 {
 
 
 }
-#zenya{
+
+#zenya {
     opacity: 0;
-width: 80%;
+    width: 80%;
 
 }
-.actif{
-opacity: 1;
-animation: fadein2 1s forwards;
+
+.actif {
+    opacity: 1;
+    animation: fadein2 1s forwards;
 }
-.actif2{
+
+.actif2 {
     opacity: 1;
     animation: fadein3 1s forwards;
-    }
-#textinfo{
-opacity: 0;
+}
+
+#textinfo {
+    opacity: 0;
 
 }
 
 
 #infotarif {
     position: absolute;
-    
+
     z-index: 2;
     top: 100%;
     left: 0%;
     margin-top: 90px;
-    
-    
-    
-    
+
+
+
+
 }
 
 #infotarif2 {
@@ -295,10 +302,10 @@ opacity: 0;
     padding-bottom: 14px;
     font-size: 10px;
     font-family: "overwatchfont", Courier, monospace;
-    
+
     color: #ffffff;
-    
-   
+
+
 }
 
 #comminput {
@@ -353,7 +360,7 @@ opacity: 0;
     list-style: none;
     overflow: hidden;
     box-shadow: 0px 0px 10px rgb(0, 0, 0),
-    0px 0px 10px #000000;
+        0px 0px 10px #000000;
     border: solid 1px rgb(214, 214, 214);
 }
 
@@ -402,7 +409,7 @@ opacity: 0;
 }
 
 header {
-    
+
     justify-items: center;
     background-color: black;
     padding-bottom: 12px;
@@ -434,18 +441,7 @@ section {
 
 }
 
-core {
-    display: flex;
-    justify-content: center;
-    background-color: aliceblue;
-    border: solid 1px black;
-    width: 80%;
-    padding: auto;
 
-
-
-
-}
 
 
 #facebook,
@@ -518,7 +514,7 @@ h1 {
 footer {
     font-family: "overwatchfont";
     padding: 15px;
-font-size: 12px;
+    font-size: 12px;
 
 }
 
@@ -652,10 +648,11 @@ font-size: 12px;
 
     to {
         opacity: 1;
-        
+
     }
-    
+
 }
+
 @keyframes fadein2 {
     from {
         opacity: 0;
@@ -666,8 +663,9 @@ font-size: 12px;
         opacity: 1;
         transform: translateX(20px);
     }
-    
+
 }
+
 @keyframes fadein3 {
     from {
         opacity: 0;
@@ -678,7 +676,7 @@ font-size: 12px;
         opacity: 1;
         transform: translateX(45px);
     }
-    
+
 }
 
 /* todo--------------------------------------- MEDIA QUERIES ---------------------------------------*/
@@ -686,151 +684,229 @@ font-size: 12px;
 
 /* todo---------------------------------------Responsive mediaquery 1920 ---------------------------------------*/
 @media only screen and (min-width: 1920px) {
-video{
-height: 20vw;
-width: 50vw;
+    video {
+        height: 20vw;
+        width: 50vw;
 
-}
+    }
 
-#infotarif {
-    top: 100%;
-    left: 5%;
+    #infotarif {
+        top: 100%;
+        left: 5%;
+
+    }
+
+    #infotarif2 {
+        top: 110%;
+        left: 10%;
+    }
+
+    #navigation li {
+        font-size: 45px;
+        margin-left: 65px;
+    }
+
+    #infoparc {
+        font-size: 30px;
+    }
+
+    #logo {
+        width: 90px;
+        height: 80px;
+
+    }
+
+    #dva {
+        width: 45vw;
+
+    }
+
+    #titre {
+        font-size: xx-large;
+
+    }
+
+    #tarifs {
+        height: 24vw;
+        width: 39vw;
+
+    }
+
+    #logo_connexion2 {
+        width: 60%;
+    }
+
+    #pseudoinput {
+        font-size: 2vw;
+    }
+
+    #comminput {
+        font-size: 2vw;
+
+    }
+
+    #commentairefirebase {
+        width: 52vw;
+    }
+
+    .comms {
+        font-size: x-large;
+        margin: 5vw;
+        line-height: 3vw;
+    }
+
+    #youtube,
+    #twitter,
+    #facebook {
+        width: 5vw;
+
+
+    }
+
+    footer {
+        font-size: 2vw;
+    }
+
+    #social {
+        column-gap: 3vw;
+    }
+
+    #tarifs p {
+        font-size: 1.5vw;
+        margin-bottom: 2vw;
+    }
+
+    p#tariftitre {
+        font-size: 3vw;
+
+    }
+
+    #zenya {
+        width: 100%;
+
+    }
+
+    button {
+
+        width: 20vw;
+        height: 3vw;
+    }
+
+    #poster {
+        font-size: x-large;
+        width: 15vw;
+        height: 2vw;
+    }
+
+    button a {
+        font-size: x-large;
+    }
+
+   
+
+  
+
+    #video {
+        box-sizing: border-box;
+
+    }
+
+
+
+}@media only screen and (min-width:2000px){
+
+
+
     
 }
-#infotarif2 {
-    top: 110%;
-   left: 10%;
-}
-#navigation li{
-font-size: 45px;
-margin-left: 65px;
-}
-#infoparc{
-    font-size: 30px;
-}
-#logo{
-width: 90px;
-height:80px;
+  @media only screen and (min-width:1660px)  {
+        video {
+            height: 30vw;
+            width: 50vw;
 
-}
-#dva{
-width: 45vw;
+        }header a{
+            font-size: 45px;
+        }
+    } 
+    @media only screen and (min-width:1400px) and (max-width:1660px){
+        video {
+            height: 400px;
+            width: 680px;
 
-}
-#titre{
-font-size: xx-large;
+        } header a{
+            font-size: 45px;
+        }
+    }
+@media only screen and (min-width:1200px) and (max-width:1440PX) {
+    video {
+        height: 400px;
+        width: 600px;
 
-}
-#tarifs{
-height: 24vw;
-width: 39vw;
-
-}
-#logo_connexion2{
-    width: 60%;
-}
-#pseudoinput{
-    font-size: 2vw;
-}
-#comminput{
-    font-size: 2vw;
-
-}
-#commentairefirebase{
-    width: 52vw;
-}
-.comms{
-    font-size: x-large;
-    margin: 5vw;
-    line-height: 3vw;
-}
-#youtube, #twitter ,#facebook {
-width: 5vw;
-
-
-}
-footer{font-size: 2vw;}
-#social{
-    column-gap: 3vw;
-}
-
-#tarifs p {
-    font-size: 1.5vw;
-    margin-bottom: 2vw;
-}
-p#tariftitre{
-font-size: 3vw;
-
-}
-#zenya{
-width: 100%;
-
-}
-button{
-
-    width: 20vw;
-    height: 3vw;
-}
-#poster{
- font-size: x-large;  
- width: 15vw;
- height: 2vw; 
-}
-button a {
-    font-size: x-large;
-}
-
-@media only screen and (min-width:1440px) {
-  video{
-height: 20vh;
-width: 40vw;
-
-  }  
-}
-@media only screen and (min-width:1660px) {
-    video{
-  height: 30vw;
-  width: 50vw;
-  
-    }  
-  }
-#video{
-box-sizing: border-box;
-
-}
-
-
-
-}
-
-
-
-
-
-
-@media(min-width: 760px) and (max-width: 1388px) {
-    body{
+    }
+    header a{
+        font-size: 30px;
+    }
+    .comms{
+        font-size: 15px;
+    }
+    #dva {
         
-margin: 0%;
-
         
+
     }
     .dva{
-        display: none;
+      
+    
     }
-    #intro{
-        
+  }
+@media only screen and (min-width:901px) and (max-width:1199px) {
+    
+    header a{
+        font-size: 90px;
+    }
+  }
+@media only screen and (min-width:900px) and (max-width:1199px){
+    
+  header a{
+      font-size: 25px;
+  }
+  video {
+    height: 300px;
+    width: 500px;
+
+}
+.comms{
+    font-size: 15px;
+}
+}
+
+@media(min-width: 760px) and (max-width: 1040px) {
+    body {
+
+        margin: 0%;
+
+
+    }
+
+    .dva {
+      display: none;  
+    }
+
+    #intro {
+
         display: flex;
         justify-content: center;
-        
-    }
-   video{
 
-    margin-right: 0vw;
-   }
+    }
+
+    video {
+
+        margin-right: 0vw;
+    }
+
     #video {
-        
-width: 640px;
+
+        width: 640px;
     }
 
     ul {
@@ -865,60 +941,73 @@ width: 640px;
 }
 
 /* todo ---------------------------------------Responsive mediaquery phone ---------------------------------------*/
-
-@media (max-width: 760px) {
+@media only screen and (min-width:760px) and (max-width:799px) {
     
-    #intro{
-        
+  video{
+      width: 80vw;
+  }
+
+}
+@media only screen and (min-width:500px) and (max-width:759px) {
+     #intro {
+
         display: flex;
         justify-content: center;
-        
-        
+
+
     }
-    body{
+
+ 
+    body {
         width: 100%;
         margin: 0%;
     }
-    
-            
-    
-    
-    
-            #navigation{
-    width: 100vw; 
-      
-        
-       
-                
-            }
-    .dva{display: none;}
+
+
+
+
+
+    #navigation {
+        width: 100vw;
+
+
+
+
+    }
+
+    .dva {
+        display: none;
+    }
+
     #dva {
         display: none;
 
     }
 
     ul {
-        font-size: 13px;
+        font-size: 10px;
     }
 
     video {
-        margin-right: 0vw;  
-        width: 300px;
-        height: 40%;
+        margin-right: 0vw;
+        width: 400px;
+        height: 60%;
     }
 
-#infoparc{
-    text-align: center;
+    #infoparc {
+        text-align: center;
 
-flex-direction: column;
+        flex-direction: column;
 
 
 
-}
-#infoparc p{
-font-size: 12px;
+    }
 
-}
+    #infoparc p {
+        font-size: 12px;
+
+    }
+
     #tarifs {
         width: 80%;
 
@@ -954,6 +1043,7 @@ font-size: 12px;
         text-align: center;
         margin-top: 9px;
     }
+
     header {
         display: flex;
         justify-items: center;
@@ -961,21 +1051,152 @@ font-size: 12px;
         padding-bottom: 12px;
         width: 100%;
     }
-    header a{
-font-size: 8px;
+
+    header a {
+        font-size: 11px;
 
     }
-    header li{
+
+    header li {
         padding: 0%;
     }
 
-    #logo_connexion2{
+    #logo_connexion2 {
 
         width: 40%;
     }
-    #logo{
+
+    #logo {
         transform: translate(12px, 0px);
-height: 40px;
+        height: 40px;
+
+
+    }
+}
+
+/* todo ---------------------------------------Responsive mediaquery phone ---------------------------------------*/
+
+@media (max-width: 500px) {
+
+    #intro {
+
+        display: flex;
+        justify-content: center;
+
+
+    }
+
+    body {
+        width: 100%;
+        margin: 0%;
+    }
+
+
+
+
+
+    #navigation {
+        width: 100vw;
+
+
+
+
+    }
+
+    .dva {
+        display: none;
+    }
+
+    #dva {
+        display: none;
+
+    }
+
+    ul {
+        font-size: 13px;
+    }
+
+    video {
+        margin-right: 0vw;
+        width: 300px;
+        height: 40%;
+    }
+
+    #infoparc {
+        text-align: center;
+
+        flex-direction: column;
+
+
+
+    }
+
+    #infoparc p {
+        font-size: 12px;
+
+    }
+
+    #tarifs {
+        width: 80%;
+
+
+
+    }
+
+    #dva {
+        display: none;
+
+    }
+
+    #titre {
+        font-size: 15px;
+    }
+
+    #infotarif {
+        display: none;
+    }
+
+    #infotarif2 {
+        display: none;
+    }
+
+    #commentairefirebase {
+        width: 80%;
+    }
+
+    h1#titre {
+        font-size: 15px;
+        padding: 0%;
+        width: 300px;
+        text-align: center;
+        margin-top: 9px;
+    }
+
+    header {
+        display: flex;
+        justify-items: center;
+        background-color: black;
+        padding-bottom: 12px;
+        width: 100%;
+    }
+
+    header a {
+        font-size: 8px;
+
+    }
+
+    header li {
+        padding: 0%;
+    }
+
+    #logo_connexion2 {
+
+        width: 40%;
+    }
+
+    #logo {
+        transform: translate(12px, 0px);
+        height: 30px;
 
     }
 }
