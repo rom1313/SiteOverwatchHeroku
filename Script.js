@@ -55,9 +55,10 @@ function affichercomm() {
   }) */
 
 }
-//TODO -------------------------------------------------------------------------------  Constructeur commentaire firebase --------------------------
+//TODO --------------------------  Constructeur commentaire firebase --------------------------
 
 function ajoutcommentaire(pseudo, commentaire) {
+  
   /* firebase.database().ref('Commentaires/' + pseudo).set({
     pseudo: pseudo,
     commentaire: commentaire,
@@ -82,9 +83,6 @@ function ajoutcommentaire(pseudo, commentaire) {
     affichercomm()
   })
   
-
-
- 
 }
 
 //TODO ------------------------------------------------------------------------------- Ajout de commentaire firebase --------------------------

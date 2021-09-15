@@ -21,14 +21,15 @@ let bouttonvalider = document.querySelector('#valider')
 //TODO -------- Fonction nomreservation -------------
 function input() {
   let nom = inputnom.value
-  
+
   nomreservationapercu.textContent = nom
 
 }
-function inputdateapercu(){
-let date = inputdate.value
-dateapercu.textContent = date
-  
+
+function inputdateapercu() {
+  let date = inputdate.value
+  dateapercu.textContent = date
+
 
 }
 //TODO -------- AJOUT JAIME -------------
@@ -61,9 +62,9 @@ async function incrementjaime() {
         valeur: jaimevalue
       })
     }).then(res => valeurjaime.textContent = jaimevalue)
-    .then(res => console.log(res+1));
+    .then(res => console.log(res + 1));
   jaime()
-  
+
 }
 
 //todo-------------------------------------
@@ -109,7 +110,7 @@ function ajoutspectacle() {
   bouttonscpectacle.textContent = "supprimer"
   activite.textContent += " " + "Spectacle"
   img2.style.filter = "grayscale(90%)"
-  
+
 }
 
 function ajoutlaser() {
@@ -139,17 +140,40 @@ bouttontele.addEventListener("click", function tele() {
     document.querySelector("#error").prepend(p);
 
   } else {
-   
+
     var pdf = {
-      content: [
-        { text: 'Votre réservation Overwatch', fontSize: 45,alignment: 'center'},
-        { text: `\n\nNom de réservation : ${nomreservationapercu.textContent}`, fontSize: 25, alignment: 'center' },
-        { text: `\nDate de réservation : ${inputdate.value}`, fontSize: 25, alignment: 'center' },
-        { text: `\nLes activitées choisis : ${activite.textContent}`, fontSize: 25, alignment: 'center' },
-        { text: `\nVotre code : ${codefinal}`, fontSize: 25, alignment: 'center' },
-        { text: `\n\nOverwatchWorld vous remercie de votre confiance.`, fontSize: 35, alignment: 'center' },
-        
-       
+      content: [{
+          text: 'Votre réservation Overwatch',
+          fontSize: 45,
+          alignment: 'center'
+        },
+        {
+          text: `\n\nNom de réservation : ${nomreservationapercu.textContent}`,
+          fontSize: 25,
+          alignment: 'center'
+        },
+        {
+          text: `\nDate de réservation : ${inputdate.value}`,
+          fontSize: 25,
+          alignment: 'center'
+        },
+        {
+          text: `\nLes activitées choisis : ${activite.textContent}`,
+          fontSize: 25,
+          alignment: 'center'
+        },
+        {
+          text: `\nVotre code : ${codefinal}`,
+          fontSize: 25,
+          alignment: 'center'
+        },
+        {
+          text: `\n\nOverwatchWorld vous remercie de votre confiance.`,
+          fontSize: 35,
+          alignment: 'center'
+        },
+
+
       ]
     };
     pdfMake.createPdf(pdf).download(`Réservation de : ${nomreservationapercu.textContent}.pdf`)
@@ -158,7 +182,7 @@ bouttontele.addEventListener("click", function tele() {
 
 
 
-    
+
     /* var text = `Nom de la réservation : ${nomreservationapercu.textContent}\nDate de réservation : ${inputdate.value}\nActivitées choisis : ${activite.textContent}\nCode : ${codefinal}  `;
     var filename = "Réservation.txt";
     download(filename, text); */
@@ -195,40 +219,42 @@ function supplaser() {
 function nombrealeatoire(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
-
-function refreshalert() {
-  document.querySelector(".alertecomm ").remove()
-  return
-}
 let indicecom;
 let text = document.createElement("p")
-const reponseJson2 = async () => {
-  
-  text.innerHTML = ""
- const data = await fetch('http://localhost:13000/mariaDBcomms');
- const data2 = await data.json();
+const commmaria = async () => {
+  text.style.animation = "fadeout 0.2s"
+  const data = await fetch('http://localhost:13000/mariaDBcomms');
+  const data2 = await data.json();
   let nb = nombrealeatoire(data2.length)
-  if (nb === indicecom && nb>data2.length) {
+
+  if (nb === indicecom && nb < data2.length) {
     nb++
-    indicecom = nb++
-  }
-  else if (nb === indicecom && nb === data2.length) {
+    indicecom = nb
+    
+  } else if (nb === indicecom && nb === data2.length) {
     nb--
-    indicecom = nb--
+    indicecom = nb
   }
-   indicecom=nb
-  
+  indicecom = nb
+
   text.className = "commmaria"
   text.textContent = data2[nb].pseudo + " : " + data2[nb].commentaire
   document.querySelector("#commmaria").appendChild(text)
+  text.style.animation = "fadein 1s"
 
 }
-reponseJson2()
+commmaria()
 setInterval(() => {
-  reponseJson2()
+  
+  commmaria()
 }, 5000)
+
 //todo--------------------------  Réservations POST mariaDB FETCH ------------------------------------
 
+function refreshalert() {
+  document.querySelector(".alertecomm ").remove()
+
+}
 
 function postreservation() {
 
@@ -249,8 +275,7 @@ function postreservation() {
     }, 2000);
     document.querySelector("#error").prepend(p);
 
-  }
-  else if (inputdate.value == "") {
+  } else if (inputdate.value == "") {
     let p = document.createElement("h5")
     p.className = "alertecomm"
     p.textContent = "Vous n'avez pas choisis de date"
@@ -259,7 +284,7 @@ function postreservation() {
     }, 2000);
     document.querySelector("#error").prepend(p);
 
-  }else {
+  } else {
     bouttonbody.disabled = "true"
     bouttonbody.style.color = "grey"
     bouttonscpectacle.disabled = "true"
@@ -277,7 +302,7 @@ function postreservation() {
     let code = nombrealeatoire(344)
     let rescode = codereservation + code
     codefinal = rescode
-    
+
     fetch('http://localhost:13000/mariaDBreservation', {
         method: 'post',
         headers: {
@@ -291,7 +316,11 @@ function postreservation() {
           code: rescode
         })
       }).then(res => res.json())
-      .then((res) => {bouttonvalider.remove();console.log(res)})
+      .then((res) => {
+        bouttonvalider.remove();
+        
+        console.log(res)
+      })
 
 
 
