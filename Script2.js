@@ -34,7 +34,15 @@ function inputdateapercu() {
 }
 //TODO -------- AJOUT JAIME -------------
 
-bouttonjaime.addEventListener('click', () => {
+bouttonjaime.addEventListener('click', (e) => {
+  console.log(e.target)
+  e.target.className = "jaimebouttonanim"
+  
+  setTimeout(() => {
+    e.target.className = ""
+    
+  }, 3000);
+ 
   incrementjaime()
 
 })
@@ -49,6 +57,7 @@ const jaime = async () => {
 }
 jaime()
 async function incrementjaime() {
+  
   const reponse = await fetch('http://localhost:13000/mariaDBjaime');
   const reponsejson = await reponse.json();
   let jaimevalue = reponsejson[0].valeur
@@ -64,7 +73,7 @@ async function incrementjaime() {
     }).then(res => valeurjaime.textContent = jaimevalue)
     .then(res => console.log(res + 1));
   jaime()
-
+  
 }
 
 //todo-------------------------------------

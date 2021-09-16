@@ -2,63 +2,66 @@
 
 
 
+
+
 affichercomm()
 
 let input1 = document.querySelector("#pseudoinput")
 let input2 = document.querySelector("#comminput")
 let donnes;
 let data
+
 function affichercomm() {
-    
-  
+
+
   fetch('https://apiildaa.herokuapp.com/commsfilerouge')
-  .then((res) => res.json())
+    .then((res) => res.json())
     .then((json) => {
       donnes = json
       donnes.forEach(element => {
         console.log(element)
-      let p = document.createElement("p")
-      let commss = document.querySelector("#espacecomm"); 
-      let pseudo;
-      let commentaire;
-      pseudo = element.pseudo
+        let p = document.createElement("p")
+        let commss = document.querySelector("#espacecomm");
+        let pseudo;
+        let commentaire;
+        pseudo = element.pseudo
         commentaire = element.commentaire
         p.className = "comms"
-      p.innerHTML = pseudo + " " + ":  " + "  " + commentaire;
-      document.querySelector("#espacecomm").appendChild(p)
+        p.innerHTML = pseudo + " " + ":  " + "  " + commentaire;
+        document.querySelector("#espacecomm").appendChild(p)
       });
-      
+
       console.log(donnes)
     });
 
 
- /*  ref = firebase.database().ref('Commentaires/')
-  ref.on("value", function (snapshot) {
+  /*  ref = firebase.database().ref('Commentaires/')
+   ref.on("value", function (snapshot) {
 
-    snapshot.forEach(function (childSnapshot) {
-      let p = document.createElement("p")
-      let commss = document.querySelector("#espacecomm");
-      let data = childSnapshot.val();
-      let pseudo;
-      let commentaire;
-      pseudo = data.pseudo
-      commentaire = data.commentaire
-      console.log(pseudo)
-      console.log(commentaire)
-      p.className = "comms"
-      p.innerHTML = pseudo + " " + ":  " + "  " + commentaire;
-      document.querySelector("#espacecomm").appendChild(p)
-    })
+     snapshot.forEach(function (childSnapshot) {
+       let p = document.createElement("p")
+       let commss = document.querySelector("#espacecomm");
+       let data = childSnapshot.val();
+       let pseudo;
+       let commentaire;
+       pseudo = data.pseudo
+       commentaire = data.commentaire
+       console.log(pseudo)
+       console.log(commentaire)
+       p.className = "comms"
+       p.innerHTML = pseudo + " " + ":  " + "  " + commentaire;
+       document.querySelector("#espacecomm").appendChild(p)
+     })
 
 
-    return
-  }) */
+     return
+   }) */
 
 }
 //TODO --------------------------  Constructeur commentaire firebase --------------------------
 
 function ajoutcommentaire(pseudo, commentaire) {
-  
+
   /* firebase.database().ref('Commentaires/' + pseudo).set({
     pseudo: pseudo,
     commentaire: commentaire,
@@ -66,23 +69,23 @@ function ajoutcommentaire(pseudo, commentaire) {
   }); */
 
   fetch('https://apiildaa.herokuapp.com/commsfilerougeajout', {
-    method: 'post',
-    mode: 'cors',
-    headers: {
-      'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      pseudo: pseudo,
-      comm : commentaire
-    })
-  }).then((res) => res.json())
-    .then((json)=> {
+      method: 'post',
+      mode: 'cors',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        pseudo: pseudo,
+        comm: commentaire
+      })
+    }).then((res) => res.json())
+    .then((json) => {
       console.log(json)
-      
-    affichercomm()
-  })
-  
+
+      affichercomm()
+    })
+
 }
 
 //TODO ------------------------------------------------------------------------------- Ajout de commentaire firebase --------------------------
@@ -112,17 +115,17 @@ document.querySelector("#poster").addEventListener("click", function () {
     document.querySelector("#error").prepend(p);
   } else if (input1.value != "" && input2.value != "") {
     console.log("ok");
-   
-    
+
+
     ajoutcommentaire(input1.value, input2.value)
     setTimeout(() => {
       refreshcomm();
     }, 2000);
-    
-    
-    
-  
-   
+
+
+
+
+
 
   }
 });
@@ -131,10 +134,10 @@ document.querySelector("#poster").addEventListener("click", function () {
 
 function refreshcomm() {
   document.querySelector("#espacecomm").remove(".comms")
-   window.location.href = 'index.html#espacecomm'; 
-   window.location.reload(true);  
+  window.location.href = 'index.html#espacecomm';
+  window.location.reload(true);
   affichercomm()
-  
+
 }
 
 //Refresh alerte ajout comm
@@ -173,17 +176,14 @@ function creationinfotarif() {
   let textinfo = document.querySelector("#textinfo")
   textinfo.className = "actif2"
   let text = document.createElement('h2')
-  
+
   if (tarif == 1) {
     textinfo.textContent = "Tarif standard + 16 ans"
-  }
-  else if (tarif == 2) {
+  } else if (tarif == 2) {
     textinfo.textContent = "Tarif Junior - 16 ans"
-  }
-  else if (tarif == 3) {
+  } else if (tarif == 3) {
     textinfo.textContent = "Pass 48H adulte + 16 ans "
-  }
-  else if (tarif == 4) {
+  } else if (tarif == 4) {
     textinfo.textContent = "Pass 48H Junior - 16 ans "
   }
 }
@@ -214,9 +214,46 @@ function youtube_pop_up() {
 }
 
 
+let obsever = new IntersectionObserver((entries) => {
+  entries.forEach(element => {
+    // console.log(entries[0].target.id)
+    // console.log(element.isIntersecting)
+    // console.log(element.intersectionRatio)
+    let carousel = document.querySelector('.carousel')
+    let firebase = document.querySelector('#commentairefirebase')
+   
+      if (element.isIntersecting === true&&entries[0].target.id==='carousel') {
+      
+       carousel.classList.add('carouselobserver')
+        
+
+    }
+    else if (element.isIntersecting === true && entries[0].target.id === 'commentairefirebase') {
+     
+     
+      firebase.classList.add('firebasemoove')
+       
+
+   }
+    
+      
+    
+    
+      
+      
+      
+
+
+    
+  })
+}, {
+  threshold: [0.1]
+});
 
 
 
+obsever.observe(carousel)
+obsever.observe(document.querySelector('#commentairefirebase'))
 
 
 
@@ -272,7 +309,7 @@ function youtube_pop_up() {
 
 
 //TODO ------------------------------------------------------------------------------- Particles --------------------------
-
+// particlesJS.load('particle-div','particle-cfg.json'
 // particlesJS("particles-js", {
 //     "particles": {
 //       "number": {

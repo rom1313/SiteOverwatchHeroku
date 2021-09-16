@@ -7,13 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Overwatch World</title>
   <link rel="stylesheet" href="Style2.css">
-  
+  <script src="particles.js"></script>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/png" href="img/favicon.png" loading="lazy" />
 
 </head>
+<div id="particles">
 
+</div>
 <body>
   <header>
     <img id="logo" src="img/logo.png" alt="" loading="lazy">
@@ -88,7 +90,12 @@
     <a href="#null" id="youtube" onclick="youtube_pop_up()"><img src="img/youtube.svg" alt=""></a>
     <a href="#null" id="twitter" onclick="twitter_pop_up()"><img src="img/twitter.svg" alt=""></a>
   </div>
+  <script>
 
+    window.onload=()=>{
+particlesJS.load('particles','particles-cfg.json')
+    }
+  </script>
   <footer>
     Copyright 2021 © Tous droits reservés
   </footer>

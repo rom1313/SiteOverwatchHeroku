@@ -18,6 +18,7 @@
     "firebase": "^8.7.0",
     "helmet": "^4.6.0",
     "nodemon": "^2.0.9",
+    "particlesjs": "^2.2.3",
     "redis": "^3.1.2",
     "socket.io": "^4.1.2"
   },
