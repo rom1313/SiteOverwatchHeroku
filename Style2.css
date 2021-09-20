@@ -456,7 +456,7 @@ footer {
     #img1,
     #img2,
     #img3 {
-        width: 22vw;
+        width: 20vw;
 
 
     }
@@ -533,7 +533,7 @@ footer {
     }
 
     .commmaria {
-        font-size: 30px;
+        font-size: 20px;
         margin-top: 0;
     }
 
@@ -585,7 +585,7 @@ footer {
     #valider, #nouvellereservation,#telechargement{
         height: 2vw;
         width: 15vw;
-        font-size: 15px;
+        font-size: 12px;
     }
 }
 
