@@ -5,7 +5,7 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 13000
 const compression = require('compression')
-const optimus = require('connect-image-optimus');
+const { Protector } = require('@rom13/protector')
 const server = require('http').Server(app)
 const helmet = require("helmet");
 app.use(express.urlencoded({ extended: true }));
@@ -19,11 +19,9 @@ app.use(express.static('static'));
 //TODO -----------------------------------------------------------
 //TODO ------- Middleware-----
 //TODO -----------------------------------------------------------
-app.use(helmet({
-  
-}));
-app.use(compression())
-app.use(optimus(publicDir));
+app.use(helmet());
+app.use(compression({ level: 9 }))
+
 //TODO ----------------------------------------------
 //TODO ------- LANCEMENT ECOUTE-----
 //TODO ----------------------------------------------
@@ -61,24 +59,32 @@ var connection = mysql.createConnection({
 //TODO ----------------------------------------------------
 //TODO ------- Mapping Requête et Réponses -----
 //TODO ----------------------------------------------------
-
-
+app.post('/', (req, res) => {
+  res.sendFile('/public/index.html', { root: __dirname })
+})
+ 
 
 //TODO --------- Base de données mariadb projetfilerouge reservation --------------------------
 
 app.post('/mariaDBreservation', (req, res) => {
-  var post = {
+  let protector = new Protector()
+  let post = {
     nom: req.body.nom,
     date: req.body.date,
     activitees: req.body.activitees,
     code: req.body.code
   };
-  var query = connection.query('INSERT INTO reservation SET?', post, function (err, result) {
+  if (protector.isprotek(post) === true) {
+   var query = connection.query('INSERT INTO reservation SET?', post, function (err, result) {
     if (err) throw err;
+     res.json({ statut: 'ok' })
+  });  
+  /* console.log(query.sql); */
+  }
+  else {
+    res.json({ statut: 'error, charactère non valide' })
     
-  });
-  res.json(post)
-  console.log(query.sql);
+  } 
 })
 
 //TODO --------- Recuperation des comms maria db  --------------------------

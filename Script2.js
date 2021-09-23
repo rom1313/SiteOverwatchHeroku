@@ -294,17 +294,7 @@ function postreservation() {
     document.querySelector("#error").prepend(p);
 
   } else {
-    bouttonbody.disabled = "true"
-    bouttonbody.style.color = "grey"
-    bouttonscpectacle.disabled = "true"
-    bouttonscpectacle.style.color = "grey"
-    bouttonlaser.disabled = "true"
-    bouttonlaser.style.color = "grey"
-    bouttonvalider.style.color = "grey"
-    bouttonvalider.remove()
-    inputnom.disabled = "true"
-    inputdate.disabled = "true"
-    bouttontele.style.display = "initial"
+    
     let resnom = nomreservationapercu.textContent
     let resdate = inputdate.value
     let resactivitees = activite.textContent
@@ -326,9 +316,38 @@ function postreservation() {
         })
       }).then(res => res.json())
       .then((res) => {
-        bouttonvalider.remove();
+        if (res.statut === 'error, charactère non valide') {
+          let p = document.createElement("h5")
+    p.className = "alertecomm"
+    p.textContent = "Votre nom contient des charactères invalides !"
+    setTimeout(() => {
+      refreshalert();
+    }, 2000);
+    document.querySelector("#error").prepend(p);
+
+        }
+        else {
+          
+          bouttonbody.disabled = "true"
+          bouttonbody.style.color = "grey"
+          bouttonscpectacle.disabled = "true"
+          bouttonscpectacle.style.color = "grey"
+          bouttonlaser.disabled = "true"
+          bouttonlaser.style.color = "grey"
+          bouttonvalider.style.color = "grey"
+          bouttonvalider.remove()
+          inputnom.disabled = "true"
+          inputdate.disabled = "true"
+          bouttontele.style.display = "initial"
+bouttonvalider.remove();
+
+
+
+        }
+          
         
-        console.log(res)
+        
+        console.log(res.statut)
       })
 
 
