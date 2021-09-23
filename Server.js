@@ -20,7 +20,7 @@ app.use(express.static('static'));
 //TODO ------- Middleware-----
 //TODO -----------------------------------------------------------
 app.use(helmet({
-  contentSecurityPolicy: (process.env.NODE_ENV === 'production') ? undefined : false
+  
 }));
 app.use(compression())
 app.use(optimus(publicDir));

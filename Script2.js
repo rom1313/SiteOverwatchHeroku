@@ -234,7 +234,7 @@ const commmaria = async () => {
   text.style.animation = "fadeout 0.2s"
   const data = await fetch('http://localhost:13000/mariaDBcomms');
   const data2 = await data.json();
-  let nb = nombrealeatoire(data2.length)
+  let nb = nombrealeatoire(data2.length-1)
 
   if (nb === indicecom && nb < data2.length) {
     nb++

@@ -19,7 +19,7 @@ function affichercomm() {
     .then((json) => {
       donnes = json
       donnes.forEach(element => {
-        console.log(element)
+        
         let p = document.createElement("p")
         let commss = document.querySelector("#espacecomm");
         let pseudo;
@@ -31,7 +31,7 @@ function affichercomm() {
         document.querySelector("#espacecomm").appendChild(p)
       });
 
-      console.log(donnes)
+      
     });
 
 
