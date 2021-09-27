@@ -6,7 +6,6 @@ const app = express()
 const port = process.env.PORT || 13000
 const compression = require('compression')
 const { Protector } = require('@rom13/protector')
-const server = require('http').Server(app)
 const helmet = require("helmet");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -15,7 +14,7 @@ app.use(express.json());
 //TODO -----------------------------------------------------------
 var publicDir = require('path').join(__dirname, '');
 app.use(express.static(publicDir));
-app.use(express.static('static'));
+
 //TODO -----------------------------------------------------------
 //TODO ------- Middleware-----
 //TODO -----------------------------------------------------------
@@ -26,7 +25,7 @@ app.use(compression({ level: 9 }))
 //TODO ------- LANCEMENT ECOUTE-----
 //TODO ----------------------------------------------
 
-server.listen(process.env.PORT || 13000, () => {
+app.listen(process.env.PORT || 13000, () => {
   console.log('Le server fonctionne sur le port : ' + port);
 })
 
@@ -79,7 +78,7 @@ app.post('/mariaDBreservation', (req, res) => {
     if (err) throw err;
      res.json({ statut: 'ok' })
   });  
-  /* console.log(query.sql); */
+   console.log(query.sql);
   }
   else {
     res.json({ statut: 'error, charactère non valide' })

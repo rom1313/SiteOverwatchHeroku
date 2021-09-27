@@ -213,44 +213,31 @@ function youtube_pop_up() {
 
 }
 
-
+let carousel = document.querySelector('.carousel')
+let firebasecom = document.querySelector('#commentairefirebase')
 let obsever = new IntersectionObserver((entries) => {
   entries.forEach(element => {
+   
     // console.log(entries[0].target.id)
     // console.log(element.isIntersecting)
     // console.log(element.intersectionRatio)
-    let carousel = document.querySelector('.carousel')
-    let firebase = document.querySelector('#commentairefirebase')
-   
-      if (element.isIntersecting === true&&entries[0].target.id==='carousel') {
+      if (element.isIntersecting === true &&entries[0].target.id==='carousel') {
       
        carousel.classList.add('carouselobserver')
-        
-
-    }
+      }
+    
     else if (element.isIntersecting === true && entries[0].target.id === 'commentairefirebase') {
-     
-     
-      firebase.classList.add('firebasemoove')
-       
-
-   }
     
-      
-    
-    
-      
-      
-      
-
-
+        firebasecom.classList.add('firebasemoove')
+    }
     
   })
-}, {
+},
+  {
   threshold: [0.1]
 });
 
 
 
 obsever.observe(carousel)
-obsever.observe(document.querySelector('#commentairefirebase'))
+obsever.observe(firebasecom)

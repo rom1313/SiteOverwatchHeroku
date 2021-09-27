@@ -1,3 +1,5 @@
+
+
 //TODO -------- Déclaration -------------
 let bouttonjaime = document.querySelector('#jaimeboutton')
 let valeurjaime = document.createElement("p")
@@ -131,7 +133,7 @@ function ajoutlaser() {
 //TODO -------- Telechargement de la reservation -------------
 
 bouttontele.addEventListener("click", function tele() {
-  if (inputnom.value == "") {
+  if (inputnom.value === "") {
     let p = document.createElement("p")
     p.className = "alertecomm"
     p.textContent = "Le nom de réservation est vide"
@@ -139,7 +141,7 @@ bouttontele.addEventListener("click", function tele() {
       refreshalert();
     }, 2000);
     document.querySelector("#error").append(p);
-  } else if (activite.textContent == "") {
+  } else if (activite.textContent === "") {
     let p = document.createElement("p")
     p.className = "alertecomm"
     p.textContent = "Vous n'avez pas choisis d'activitée"
@@ -339,7 +341,8 @@ function postreservation() {
           inputnom.disabled = "true"
           inputdate.disabled = "true"
           bouttontele.style.display = "initial"
-bouttonvalider.remove();
+          bouttonvalider.remove();
+          
 
 
 
