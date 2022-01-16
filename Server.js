@@ -53,7 +53,7 @@ var connection = mysql.createConnection({
   port: "3307"
 });
 
-  connection.connect();
+ // connection.connect();
 
 //TODO ----------------------------------------------------
 //TODO ------- Mapping Requête et Réponses -----
